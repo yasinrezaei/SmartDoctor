@@ -4,8 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.smartdoctor.databinding.ActivityLoginBinding
-import com.example.smartdoctor.databinding.ActivityMainBinding
 import com.example.smartdoctor.ui.MainActivity
+import com.example.smartdoctor.ui.account.signup.SignupActivity
 
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
@@ -16,14 +16,15 @@ class LoginActivity : AppCompatActivity() {
 
 
         binding.apply {
-            loginButton.setOnClickListener {
+            loginBtn.setOnClickListener {
                 val intent = Intent(this@LoginActivity,MainActivity::class.java)
                 startActivity(intent)
             }
-            signupBtn.setOnClickListener {
-                val intent = Intent(this@LoginActivity,SignupActivity::class.java)
+            signUpTxt.setOnClickListener {
+                val intent = Intent(this@LoginActivity, SignupActivity::class.java)
                 startActivity(intent)
             }
+
         }
     }
 }

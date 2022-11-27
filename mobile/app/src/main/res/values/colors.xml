@@ -14,5 +14,6 @@
     <color name="my_blue">#2364da</color>
     <color name="my_light_blue">#478CEF</color>
     <color name="my_orange">#ff775f</color>
+    <color name="my_yellow">#FFC107</color>
 
 </resources>

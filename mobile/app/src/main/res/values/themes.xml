@@ -15,7 +15,7 @@
         <item name="android:statusBarColor">@color/my_light_blue</item>
 
         <!-- Customize your theme here. -->
-        <item name="fontFamily">@font/iranyekan</item>
+        <item name="fontFamily">@font/iranyekan_regular</item>
 
 
     </style>

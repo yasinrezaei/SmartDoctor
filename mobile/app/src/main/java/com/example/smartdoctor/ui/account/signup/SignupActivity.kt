@@ -1,13 +1,19 @@
-package com.example.smartdoctor.ui.account
+package com.example.smartdoctor.ui.account.signup
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+import com.example.smartdoctor.R
 import com.example.smartdoctor.databinding.ActivitySignupBinding
 import com.example.smartdoctor.ui.MainActivity
 
 class SignupActivity  : AppCompatActivity(){
     lateinit var binding: ActivitySignupBinding
+    private lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignupBinding.inflate(layoutInflater)
@@ -15,10 +21,12 @@ class SignupActivity  : AppCompatActivity(){
 
 
         binding.apply {
-            signupBtn.setOnClickListener {
-                val intent = Intent(this@SignupActivity, MainActivity::class.java)
-                startActivity(intent)
-            }
+            navController = findNavController(R.id.signUpNavHost)
+            bottomNav.setupWithNavController(navController)
         }
+    }
+
+    override fun onNavigateUp(): Boolean {
+        return  navController.navigateUp() || super.onNavigateUp()
     }
 }
