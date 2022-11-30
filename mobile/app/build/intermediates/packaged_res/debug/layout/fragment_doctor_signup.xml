@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="0.7"
+        android:background="@drawable/bg_login">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/signuptxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="ایجاد حساب کاربری - پزشک"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"/>
+            <EditText
+                android:id="@+id/edtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:gravity="right"
+                app:layout_constraintTop_toBottomOf="@id/signuptxt"
+                app:layout_constraintLeft_toLeftOf="@id/signuptxt"
+                app:layout_constraintRight_toRightOf="@id/signuptxt"
+                android:hint="نام کاربری"
+                android:background="@drawable/bg_circle_white"
+                android:padding="10dp"/>
+            <EditText
+                android:id="@+id/edtFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:gravity="right"
+                app:layout_constraintTop_toBottomOf="@id/edtUserName"
+                app:layout_constraintLeft_toLeftOf="@id/edtUserName"
+                app:layout_constraintRight_toRightOf="@id/edtUserName"
+                android:hint="نام و نام خانوادگی"
+                android:background="@drawable/bg_circle_white"
+                android:padding="10dp"/>
+            <EditText
+                android:id="@+id/edtAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="right"
+                android:inputType="number"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/edtFullName"
+                app:layout_constraintRight_toRightOf="@id/edtFullName"
+                app:layout_constraintLeft_toLeftOf="@id/edtFullName"
+                android:hint="شماره نظام پزشکی"
+                android:background="@drawable/bg_circle_white"
+                android:padding="10dp"/>
+
+            <EditText
+                android:id="@+id/edtPassword1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                app:layout_constraintEnd_toEndOf="@+id/edtAge"
+                app:layout_constraintStart_toStartOf="@+id/edtAge"
+                app:layout_constraintTop_toBottomOf="@+id/edtAge"
+                android:hint="رمز عبور"
+                android:inputType="textPassword"
+                android:gravity="right"
+                android:background="@drawable/bg_circle_white"
+                android:padding="10dp"/>
+
+            <EditText
+                android:id="@+id/edtPassword2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                app:layout_constraintEnd_toEndOf="@+id/edtPassword1"
+                app:layout_constraintStart_toStartOf="@+id/edtPassword1"
+                app:layout_constraintTop_toBottomOf="@+id/edtPassword1"
+                android:hint="تکرار رمز عبور"
+                android:inputType="textPassword"
+                android:gravity="right"
+                android:background="@drawable/bg_circle_white"
+                android:padding="10dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="0.3"
+        android:layout_gravity="center"
+        android:gravity="center">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signUpBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="ثبت نام"
+            android:background="@drawable/bg_login_btn"
+            android:ems="10"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</LinearLayout>

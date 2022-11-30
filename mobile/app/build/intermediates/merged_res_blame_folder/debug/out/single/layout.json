@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-mergeDebugResources-50:\\layout\\fragment_normal_user_signup.xml",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\fragment_normal_user_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-mergeDebugResources-50:\\layout\\activity_splash.xml",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-mergeDebugResources-50:\\layout\\fragment_doctor_signup.xml",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\fragment_doctor_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-mergeDebugResources-50:\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-mergeDebugResources-50:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-mergeDebugResources-50:\\layout\\activity_signup.xml",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\activity_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-mergeDebugResources-50:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-mergeDebugResources-50:\\layout\\fragment_reserve.xml",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\fragment_reserve.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-mergeDebugResources-50:\\layout\\test.xml",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\test.xml"
+    },
+    {
+        "merged": "com.example.smartdoctor.app-mergeDebugResources-50:/layout/activity_signup.xml",
+        "source": "com.example.smartdoctor.app-main-53:/layout/activity_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-mergeDebugResources-50:\\layout\\fragment_medical_test.xml",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\fragment_medical_test.xml"
+    }
+]

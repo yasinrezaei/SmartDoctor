@@ -1,0 +1,266 @@
+[
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable_bg_profile.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable\\bg_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable-v24_pic.jpg.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable-v24\\pic.jpg"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable_bg_blue_button.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable\\bg_blue_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\font_iranyekan_extra_bold.TTF.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\font\\iranyekan_extra_bold.TTF"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\navigation_nav_user_main.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\navigation\\nav_user_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\anim_fade_in.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable_bg_black_button.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable\\bg_black_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\navigation_nav_signup.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\navigation\\nav_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\font_bnazaninbold.ttf.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\font\\bnazaninbold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable_bg_profile_down.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable\\bg_profile_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable_ic_account.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable\\ic_account.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable-v24_icon_heart_with_pulse.png.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable-v24\\icon_heart_with_pulse.png"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable_bg_login_btn.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable\\bg_login_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable-v24_icon_logout.png.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable-v24\\icon_logout.png"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\layout_fragment_reserve.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\fragment_reserve.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\layout_activity_signup.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\activity_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\layout_test.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\test.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable-v24_icons_settings.png.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable-v24\\icons_settings.png"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable-v24_icon_stethoscope.png.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable-v24\\icon_stethoscope.png"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable-v24_bg_circle_white.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable-v24\\bg_circle_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable_bg_login.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable\\bg_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable-v24_doctor.png.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable-v24\\doctor.png"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable-v24_main_logo.png.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable-v24\\main_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\font_iranyekan_english.TTF.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\font\\iranyekan_english.TTF"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\anim_rotate_anim.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\anim\\rotate_anim.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable_bg_button_light_green.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable\\bg_button_light_green.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-pngs-46:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\menu_menu_signup_paging.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\menu\\menu_signup_paging.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\layout_fragment_doctor_signup.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\fragment_doctor_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable_ic_baseline_medication_24.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable\\ic_baseline_medication_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable-v24_profile.png.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable-v24\\profile.png"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\font_iranyekan.TTF.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\font\\iranyekan.TTF"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\font_iranyekan_extra_black.TTF.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\font\\iranyekan_extra_black.TTF"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\font_iranyekan_bold.TTF.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\font\\iranyekan_bold.TTF"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\menu_menu_user_paging.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\menu\\menu_user_paging.xml"
+    },
+    {
+        "merged": "com.example.smartdoctor.app-merged_res-51:/layout_activity_signup.xml.flat",
+        "source": "com.example.smartdoctor.app-main-53:/layout/activity_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable_bg_white_button.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable\\bg_white_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\font_iranyekan_regular.TTF.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\font\\iranyekan_regular.TTF"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\font_iranyekan_medium.TTF.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\font\\iranyekan_medium.TTF"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable_bg_circle_profile.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable\\bg_circle_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\font_bnazanin.ttf.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\font\\bnazanin.ttf"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\font_iranyekan_thin.TTF.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\font\\iranyekan_thin.TTF"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\anim_zoom_out.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\anim\\zoom_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable_ic_baseline_more_time_24.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable\\ic_baseline_more_time_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\drawable-v24_icons_edit.png.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\drawable-v24\\icons_edit.png"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\layout_fragment_normal_user_signup.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\fragment_normal_user_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\layout_fragment_medical_test.xml.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\layout\\fragment_medical_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-merged_res-51:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\yasin\\.gradle\\daemon\\7.4\\com.example.smartdoctor.app-main-53:\\mipmap-hdpi\\ic_launcher.webp"
+    }
+]

@@ -1,0 +1,1 @@
+[{"navFile":"src\\main\\res\\navigation\\nav_user_main.xml","javaFiles":["com.example.smartdoctor.ui.profile.ProfileFragmentDirections","com.example.smartdoctor.ui.medical_test.MedicalTestFragmentDirections"]},{"navFile":"src\\main\\res\\navigation\\nav_signup.xml","javaFiles":["com.example.smartdoctor.ui.account.signup.NormalUserSignupFragmentDirections"]}]
