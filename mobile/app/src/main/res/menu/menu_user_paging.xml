@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item android:id="@+id/chatFragment"
+        android:icon="@drawable/ic_baseline_chat_24"
+        android:title="پیامرسان" />
     <item android:id="@+id/reserveFragment"
         android:icon="@drawable/ic_baseline_more_time_24"
         android:title="نوبت گیری" />

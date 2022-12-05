@@ -1,20 +1,20 @@
-package com.example.smartdoctor.ui.medical_test
+package com.example.smartdoctor.ui.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import com.example.smartdoctor.databinding.FragmentMedicalTestBinding
+import com.example.smartdoctor.databinding.FragmentEditProfileBinding
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class MedicalTestFragment :Fragment() {
-    lateinit var binding: FragmentMedicalTestBinding
+class EditProfileFragment : BottomSheetDialogFragment() {
+    lateinit var binding:FragmentEditProfileBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentMedicalTestBinding.inflate(inflater,container,false)
+        binding = FragmentEditProfileBinding.inflate(inflater,container,false)
         return binding.root
     }
 
@@ -22,8 +22,8 @@ class MedicalTestFragment :Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply {
-            help.setOnClickListener {
-                HelpDualogFragment().show(parentFragmentManager,HelpDualogFragment().tag)
+            editProfileBtn.setOnClickListener {
+                dismiss()
             }
         }
     }
