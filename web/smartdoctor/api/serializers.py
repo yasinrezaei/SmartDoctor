@@ -2,7 +2,7 @@ from django.db import models
 from django.db.models import fields
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import UserProfile,DoctorProfile
+from .models import UserProfile,Chat,Message
 
 
 class CreateUserSerializer(serializers.ModelSerializer):
@@ -18,7 +18,7 @@ class CreateUserSerializer(serializers.ModelSerializer):
         return user
     class Meta:
         model = User
-        fields = ( "id", "username", "password", )
+        fields =  "__all__"
 
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
@@ -27,12 +27,18 @@ class UserProfileSerializer(serializers.ModelSerializer):
     
     def to_representation(self, instance):
         rep = super(UserProfileSerializer, self).to_representation(instance)
-        rep['user'] = instance.user.username
+        rep['user_id'] = instance.user.username
         rep['city'] = instance.city.city_name
         return rep 
 
-class DoctorProfileSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = DoctorProfile
-        fields="__all__"
     
+
+#---------------------Chat and message----------------------
+class ChatSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Chat
+        fields="__all__"
+class MessageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Message
+        fields="__all__"

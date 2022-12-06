@@ -1,9 +1,16 @@
 from django.contrib import admin
-from .models import UserProfile,DoctorProfile,City,Booking,BookingSettings
-# Register your models here.
+from .models import UserProfile,City,Booking,BookingSettings,Chat,Message
 
 
+#---------------------------------------------
+class ChatAdmin(admin.ModelAdmin):
+    list_display = ("user_id", "doctor_id")
+admin.site.register(Chat,ChatAdmin)
 
+class MessageAdmin(admin.ModelAdmin):
+    list_display = ("chat", "text","date")
+admin.site.register(Message,MessageAdmin)
+#----------------------------------------
 class BookingAdmin(admin.ModelAdmin):
     list_display = ("user", "doctor", "date", "time", "approved")
     list_filter = ("approved", "date")
@@ -25,15 +32,9 @@ admin.site.register(City,CityAdmin)
 
 
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display=('full_name','age','city')
+    list_display=('full_name','isDoctor','city')
     list_filter=(['city'])
     search_fields=('full_name',)
 
 admin.site.register(UserProfile,UserProfileAdmin)
 
-class DoctorProfileAdmin(admin.ModelAdmin):
-    list_display=('full_name','city','address')
-    list_filter=(['city','gender'])
-    search_fields=('full_name',)
-
-admin.site.register(DoctorProfile,DoctorProfileAdmin)

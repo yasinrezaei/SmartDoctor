@@ -8,13 +8,13 @@ from rest_framework.permissions import AllowAny,IsAuthenticated
 from rest_framework.generics import ListCreateAPIView,RetrieveDestroyAPIView, RetrieveUpdateDestroyAPIView, UpdateAPIView,RetrieveUpdateAPIView,CreateAPIView
 from django.contrib.auth.models import User
 from rest_framework import permissions
-from .serializers import CreateUserSerializer,UserProfileSerializer,DoctorProfileSerializer
-from .models import UserProfile,DoctorProfile
+from .serializers import CreateUserSerializer,UserProfileSerializer
+from .models import UserProfile
 
 
 
 #--------------------user-------------------
-#register user
+
 class CreateUserView(CreateAPIView): 
     queryset  = User.objects.all()
     permission_classes = [
@@ -22,8 +22,6 @@ class CreateUserView(CreateAPIView):
     ]
     serializer_class = CreateUserSerializer 
 
-
-    
 #------------------ create profile -------------------
 class CreateUserProfileView(CreateAPIView): 
     model = UserProfile
@@ -32,14 +30,6 @@ class CreateUserProfileView(CreateAPIView):
     ]
     serializer_class = UserProfileSerializer
 
-class CreateDoctorProfileView(CreateAPIView): 
-    model = DoctorProfile
-    permission_classes = [
-        permissions.AllowAny 
-    ]
-    serializer_class = DoctorProfileSerializer
-
-
 
 #------------------------- get profile ----------------------
 
@@ -47,29 +37,15 @@ class CreateDoctorProfileView(CreateAPIView):
 class UserProfileDetailView(APIView):
     def get(self,request):
         try:
-            user=UserProfile.objects.get(user=request.query_params['user_id'])
+            user=UserProfile.objects.get(user_id=request.query_params['user_id'])
         except:
             return Response(status=status.HTTP_404_NOT_FOUND)
 
         ser=UserProfileSerializer(user)
         return Response(ser.data,status=status.HTTP_200_OK)
 
-class DoctorProfileDetailView(APIView):
-    def get(self,request):
-        try:
-            user=DoctorProfile.objects.get(user=request.query_params['user_id'])
-        except:
-            return Response(status=status.HTTP_404_NOT_FOUND)
-
-        ser=DoctorProfileSerializer(user)
-        return Response(ser.data,status=status.HTTP_200_OK)
-
-
 #-------------------------Edit Profile--------------------------------
 class EditUserProfileView(UpdateAPIView): 
     queryset=UserProfile.objects.all()
     serializer_class=UserProfileSerializer 
 
-class EditDoctorProfileView(UpdateAPIView): 
-    queryset=DoctorProfile.objects.all()
-    serializer_class=DoctorProfileSerializer
