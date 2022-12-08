@@ -95,7 +95,6 @@ class Message(models.Model):
     chat = models.ForeignKey(Chat,on_delete=models.CASCADE, blank=True, null=True,verbose_name ="چت")
     text = models.TextField(verbose_name="متن پیام")
     sender_id = models.ForeignKey(UserProfile,on_delete=models.CASCADE, blank=True, null=True,verbose_name ="فرستنده",related_name='sender')
-    receiver_id = models.ForeignKey(UserProfile,verbose_name="دریافت کننده",on_delete=models.PROTECT,blank=True,null=True,related_name='receiver')
     date = models.DateTimeField(auto_now_add=True,verbose_name="زمان")
     class Meta:
         verbose_name = 'پیام'
