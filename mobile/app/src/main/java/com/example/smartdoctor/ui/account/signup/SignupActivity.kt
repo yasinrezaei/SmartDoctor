@@ -16,6 +16,7 @@ import com.example.smartdoctor.data.repository.AccountRepository
 import com.example.smartdoctor.databinding.ActivitySignupBinding
 import com.example.smartdoctor.databinding.FragmentNormalUserSignupBinding
 import com.example.smartdoctor.ui.MainActivity
+import com.example.smartdoctor.utils.CheckConnection
 import com.example.smartdoctor.viewmodel.SignupViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
@@ -33,36 +34,72 @@ class SignupActivity : AppCompatActivity() {
     lateinit var binding: ActivitySignupBinding
     private val viewModel: SignupViewModel by viewModels()
 
-
+    @Inject
+    lateinit var connection: CheckConnection
+    private var connectionStatus:Boolean = false
     @Inject
     lateinit var accountRepository: AccountRepository
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //checkConnection
+        checkConnection()
+        
         binding.apply {
+
+            //observe on error or success
+            viewModel.error.observe(this@SignupActivity) {
+                Toast.makeText(
+                    this@SignupActivity,
+                    it,
+                    Toast.LENGTH_SHORT
+                ).show()
+                //hide loading
+                progressBar.visibility = View.GONE
+            }
+            viewModel.user.observe(this@SignupActivity) {
+                Toast.makeText(
+                    this@SignupActivity,
+                    "حساب کاربری شما با نام کاربری " + it.username + " ساخته شد.",
+                    Toast.LENGTH_SHORT
+                ).show()
+                //hide loading
+                progressBar.visibility = View.GONE
+                finish()
+            }
+            //signup
             signUpBtn.setOnClickListener {
 
                 var password1 = edtPassword1.text.toString()
                 var password2 = edtPassword2.text.toString()
-
-                if (checkPassword(password1, password2)) {
-                    //show loading
-                    progressBar.visibility = View.VISIBLE
-                    //create account
-                    var user = UserModel(0, edtUserName.text.toString(), edtPassword1.text.toString())
-                    viewModel.userSignUp(user)
-                    viewModel.user.observe(this@SignupActivity){
-                    Toast.makeText(this@SignupActivity,"حساب کاربری شما با نام کاربری "+it.username+" ساخته شد.",Toast.LENGTH_SHORT).show()
-                    progressBar.visibility = View.GONE
-                    finish()
+                if(connectionStatus){
+                    if (checkPassword(password1, password2)) {
+                        //show loading
+                        progressBar.visibility = View.VISIBLE
+                        //create account
+                        var user =
+                            UserModel(0, edtUserName.text.toString(), edtPassword1.text.toString())
+                        viewModel.userSignUp(user)
                     }
-
-
-
                 }
+                else{
+                    Toast.makeText(
+                        this@SignupActivity,
+                        "ارتباط شما با اینترنت قطع است!",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+
+
+
+
+
+
 
 
             }
@@ -99,6 +136,13 @@ class SignupActivity : AppCompatActivity() {
             return false
         }
         return true
+    }
+
+    private fun checkConnection(){
+        connection.observe(this){
+            connectionStatus = it
+        }
+
     }
 }
 
