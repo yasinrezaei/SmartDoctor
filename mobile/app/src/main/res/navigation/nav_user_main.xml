@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_user_main"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.smartdoctor.ui.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_medicalTestFragment"
+            app:destination="@id/medicalTestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicalTestFragment"
+        android:name="com.example.smartdoctor.ui.medical_test.MedicalTestFragment"
+        android:label="MedicalTestFragment"
+        tools:layout="@layout/fragment_medical_test">
+        <action
+            android:id="@+id/action_medicalTestFragment_to_reserveFragment"
+            app:destination="@id/reserveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reserveFragment"
+        android:name="com.example.smartdoctor.ui.reserve.ReserveFragment"
+        android:label="ReserveFragment"
+        tools:layout="@layout/fragment_reserve">
+        <action
+            android:id="@+id/action_reserveFragment_to_chatFragment2"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.smartdoctor.ui.chat.ChatFragment"
+        android:label="ChatFragment"
+        tools:layout="@layout/fragment_chat"/>
+</navigation>

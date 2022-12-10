@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_signup"
+    app:startDestination="@id/normalUserSignupFragment">
+
+    <fragment
+        android:id="@+id/normalUserSignupFragment"
+        android:name="com.example.smartdoctor.ui.account.signup.NormalUserSignupFragment"
+        android:label="NormalUserSignupFragment"
+        tools:layout="@layout/fragment_normal_user_signup">
+        <action
+            android:id="@+id/action_normalUserSignupFragment_to_doctorSignupFragment"
+            app:destination="@id/doctorSignupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorSignupFragment"
+        android:name="com.example.smartdoctor.ui.account.signup.DoctorSignupFragment"
+        android:label="DoctorSignupFragment"
+        tools:layout="@layout/fragment_doctor_signup"/>
+</navigation>
