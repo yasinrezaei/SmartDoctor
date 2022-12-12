@@ -37,8 +37,7 @@ class SignupActivity : AppCompatActivity() {
     @Inject
     lateinit var connection: CheckConnection
     private var connectionStatus:Boolean = false
-    @Inject
-    lateinit var accountRepository: AccountRepository
+
 
 
 
@@ -49,7 +48,7 @@ class SignupActivity : AppCompatActivity() {
 
         //checkConnection
         checkConnection()
-        
+
         binding.apply {
 
             //observe on error or success
@@ -74,18 +73,21 @@ class SignupActivity : AppCompatActivity() {
             }
             //signup
             signUpBtn.setOnClickListener {
-
+                var username = edtUserName.text.toString()
                 var password1 = edtPassword1.text.toString()
                 var password2 = edtPassword2.text.toString()
                 if(connectionStatus){
-                    if (checkPassword(password1, password2)) {
-                        //show loading
-                        progressBar.visibility = View.VISIBLE
-                        //create account
-                        var user =
-                            UserModel(0, edtUserName.text.toString(), edtPassword1.text.toString())
-                        viewModel.userSignUp(user)
+                    if(checkUsernameLength(username)){
+                        if (checkPassword(password1, password2)) {
+                            //show loading
+                            progressBar.visibility = View.VISIBLE
+                            //create account
+                            var user =
+                                UserModel(0, username, password1)
+                            viewModel.userSignUp(user)
+                        }
                     }
+
                 }
                 else{
                     Toast.makeText(
@@ -125,6 +127,15 @@ class SignupActivity : AppCompatActivity() {
                 .show()
             return false
         }
+    }
+
+    private fun checkUsernameLength(username: String): Boolean {
+        if (username.length < 4) {
+            Toast.makeText(this@SignupActivity, "طول نام کاربری باید بیشتر از 4 حرف باشد!", Toast.LENGTH_SHORT)
+                .show()
+            return false
+        }
+        return true
     }
 
     private fun checkSamePassword(pass1: String, pass2: String): Boolean {

@@ -1,0 +1,39 @@
+{% load static %}
+<html dir="rtl">
+    <style>
+        table, th, td {
+          border:1px solid black;
+          background-color:bisque;
+        }
+    </style>
+    
+    <body>
+        {% block page_content %}
+        <h1>لیست پزشکان</h1>
+        <table>
+            <tr>
+                <th>نام پزشک</th>
+                <th>شماره نظام پزشکی </th>
+                <th>سن </th>
+                <th> شهر</th>
+                <th>آدرس مطب</th>
+              
+            </tr>
+            {% for profile in profiles %}
+                {%if profile.isDoctor %}
+                <tr>
+                    <td>{{ profile.full_name }}</th>
+                    <td>{{ profile.gmc_number}}</th>
+                    <td>{{ profile.age }}</th>
+                    <td>{{ profile.city}}</th>
+                    <td>{{ profile.address }}</th>
+                           
+                </tr> 
+                {%endif%}
+            {% endfor %}
+        </table>
+        {% endblock %}
+    </body>
+ 
+</html>
+
