@@ -3,26 +3,34 @@ from django.contrib.auth.models import User
 from django.db.models import signals
 #---------------City------------------------------
 class City(models.Model):
-    city_name = models.CharField(verbose_name = "نام شهر", max_length=50)
+    city_name = models.CharField(verbose_name = "نام شهر", max_length=50,unique=True)
     def __str__(self):
         return self.city_name
+    #for foreign key default value :)
+    @classmethod
+    def get_default_pk(cls):
+        city, created = cls.objects.get_or_create(
+            city_name='سایر ', 
+        )
+        return city.pk
     class Meta:
         verbose_name = 'شهر '
         verbose_name_plural = 'شهر ها'
 
 #----------------------User Profile--------------------------
 GENDER_CHOICES = (
-    ('زن','female'),
-    ('مرد', 'male'),
-    ('دیگر','others')
+    ('female','زن'),
+    ('male','مرد'),
+    ('others','دیگر')
 )
 class UserProfile(models.Model):
   user_id = models.ForeignKey(User,verbose_name="کاربر",on_delete=models.PROTECT,blank=True,null=True,related_name='profile_user')
   isDoctor = models.BooleanField(default=False,verbose_name="کاربر پزشک")
   gmc_number = models.CharField(max_length=255,verbose_name="شماره نظام پزشکی",blank=True,null=True)
+  national_code = models.CharField(max_length=255,verbose_name="کد ملی",blank=True,null=True)
   full_name = models.CharField(max_length=255,verbose_name="نام و نام خانوادگی",blank=True,null=True)
   age = models.IntegerField(verbose_name="سن",blank=True,null=True)
-  city = models.ForeignKey(City,verbose_name="شهر",on_delete=models.PROTECT,blank=True,null=True)
+  city = models.ForeignKey(City,verbose_name="شهر",on_delete=models.PROTECT,blank=True,null=True, default=City.get_default_pk)
   address = models.CharField(max_length = 255,verbose_name="آدرس",blank=True,null=True)
   gender = models.CharField(max_length=6, choices=GENDER_CHOICES, default='male',verbose_name="جنسیت")
   def __str__(self):

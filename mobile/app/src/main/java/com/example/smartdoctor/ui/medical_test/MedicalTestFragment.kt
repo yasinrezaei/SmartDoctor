@@ -1,10 +1,12 @@
 package com.example.smartdoctor.ui.medical_test
 
+import android.net.wifi.WifiConfiguration.AuthAlgorithm.strings
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.smartdoctor.R
 import com.example.smartdoctor.databinding.FragmentMedicalTestBinding
 
 class MedicalTestFragment :Fragment() {
@@ -23,7 +25,7 @@ class MedicalTestFragment :Fragment() {
 
         binding.apply {
             help.setOnClickListener {
-                HelpDualogFragment().show(parentFragmentManager,HelpDualogFragment().tag)
+                HelpDialogFragment(getString(R.string.help_text_medical_test)).show(parentFragmentManager,HelpDialogFragment(getString(R.string.help_text_medical_test)).tag)
             }
         }
     }

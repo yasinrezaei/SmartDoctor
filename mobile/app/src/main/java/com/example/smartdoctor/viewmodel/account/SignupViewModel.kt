@@ -1,4 +1,4 @@
-package com.example.smartdoctor.viewmodel
+package com.example.smartdoctor.viewmodel.account
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

@@ -33,7 +33,7 @@ class CreateUserProfileView(CreateAPIView):
 
 #------------------------- get profile ----------------------
 
-#http://127.0.0.1:8000/api/profile?user_id=1
+#http://127.0.0.1:8000/api/user-profile?user_id=1
 class UserProfileDetailView(APIView):
     def get(self,request):
         try:

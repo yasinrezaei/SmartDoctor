@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.example.smartdoctor.databinding.DialogHelpBinding
 
-class HelpDualogFragment : DialogFragment() {
+class HelpDialogFragment constructor(var description:String) : DialogFragment() {
     lateinit var binding:DialogHelpBinding
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -20,5 +20,8 @@ class HelpDualogFragment : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.apply {
+            helpText.text = description
+        }
     }
 }

@@ -49,6 +49,11 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
 
+    //unit test
+    testImplementation "com.google.truth:truth:1.0.1"
+    androidTestImplementation "com.google.truth:truth:1.0.1 "
+
+
     //viewmodel
     implementation("androidx.activity:activity-ktx:1.5.1")
 
@@ -60,6 +65,7 @@ dependencies {
     //lifecycle
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+
 
     //data store
     implementation 'androidx.datastore:datastore-preferences:1.0.0'

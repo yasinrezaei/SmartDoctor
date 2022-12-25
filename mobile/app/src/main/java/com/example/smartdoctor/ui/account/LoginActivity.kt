@@ -11,15 +11,17 @@ import com.example.smartdoctor.databinding.ActivityLoginBinding
 import com.example.smartdoctor.ui.MainActivity
 import com.example.smartdoctor.ui.account.signup.SignupActivity
 import com.example.smartdoctor.utils.CheckConnection
-import com.example.smartdoctor.viewmodel.LoginViewModel
+import com.example.smartdoctor.utils.SaveData
+import com.example.smartdoctor.viewmodel.account.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.*
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityLoginBinding
-    private val viewModel:LoginViewModel by viewModels()
+    private val viewModel: LoginViewModel by viewModels()
 
     @Inject
     lateinit var connection: CheckConnection
@@ -28,10 +30,19 @@ class LoginActivity : AppCompatActivity() {
 
 
 
+
+    private lateinit var saveData:SaveData
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        saveData  = SaveData(this)
+
+
+
 
         //checkConnection
         checkConnection()
@@ -44,8 +55,22 @@ class LoginActivity : AppCompatActivity() {
                     "ورود با موفقیت انجام شد",
                     Toast.LENGTH_SHORT
                 ).show()
+
+
+               GlobalScope.launch (Dispatchers.IO){
+                   saveToken(it.token)
+               }
+
+
                 val intent = Intent(this@LoginActivity,MainActivity::class.java)
                 startActivity(intent)
+                finish()
+
+
+
+
+
+
 
             }
             viewModel.error.observe(this@LoginActivity){
@@ -86,6 +111,12 @@ class LoginActivity : AppCompatActivity() {
         connection.observe(this){
             connectionStatus = it
         }
-
     }
+
+    suspend fun saveToken(token:String){
+        GlobalScope.launch {
+            saveData.saveToDataStore(token,1)
+        }
+    }
+
 }

@@ -16,37 +16,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView2"
+        <ProgressBar
+            android:id="@+id/progressBar"
             android:layout_width="150dp"
             android:layout_height="150dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/profile"
+            android:layout_marginTop="30dp"/>
+        <ImageView
+            android:id="@+id/prodileImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="30dp"/>
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/fullname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="زهرا دهقانی"
             android:textColor="@color/white"
             android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="@+id/imageView2"
-            app:layout_constraintStart_toStartOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            app:layout_constraintEnd_toEndOf="@+id/prodileImage"
+            app:layout_constraintStart_toStartOf="@+id/prodileImage"
+            app:layout_constraintTop_toBottomOf="@+id/prodileImage" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text=" @Panahdehghani"
             android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="@+id/textView3"
-            app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintEnd_toEndOf="@+id/fullname"
+            app:layout_constraintStart_toStartOf="@+id/fullname"
+            app:layout_constraintTop_toBottomOf="@+id/fullname" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
@@ -154,9 +159,9 @@
                 android:orientation="vertical">
                 <!--national code-->
                 <TextView
+                    android:id="@+id/nationalCode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="کد ملی : 1190272131"
                     android:layout_margin="5dp"/>
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
@@ -166,9 +171,9 @@
 
                 <!--city-->
                 <TextView
+                    android:id="@+id/city"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="شهر : شیراز"
                     android:layout_margin="5dp"/>
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
@@ -177,9 +182,9 @@
                     android:layout_margin="5dp"/>
                 <!--address-->
                 <TextView
+                    android:id="@+id/address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="آدرس : خیابان ارم، کوچه یازده، ..."
                     android:layout_margin="5dp"/>
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
@@ -189,9 +194,9 @@
 
                 <!--age-->
                 <TextView
+                    android:id="@+id/age"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="سن : 21 سال"
                     android:layout_margin="5dp"/>
 
 

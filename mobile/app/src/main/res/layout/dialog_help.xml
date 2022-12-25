@@ -33,11 +33,10 @@ android:layout_height="wrap_content">
             android:background="@color/my_light_blue"/>
 
         <TextView
-            android:id="@+id/titleTxt"
+            android:id="@+id/helpText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
-            android:text="این متن برای تست برای آموزش برنامه ساخته شده بنابراین این متن تست میباشد و شما میتوانید به عنوان تست از ان استفاده کنید چون این متن تست است"
             android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:textSize="18sp"

@@ -1,31 +1,15 @@
 package com.example.smartdoctor.ui.account.signup
 
-import android.app.ProgressDialog
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.NavController
-import androidx.navigation.findNavController
-import androidx.navigation.ui.setupWithNavController
-import com.example.smartdoctor.R
 import com.example.smartdoctor.data.model.UserModel
-import com.example.smartdoctor.data.repository.AccountRepository
 import com.example.smartdoctor.databinding.ActivitySignupBinding
-import com.example.smartdoctor.databinding.FragmentNormalUserSignupBinding
-import com.example.smartdoctor.ui.MainActivity
 import com.example.smartdoctor.utils.CheckConnection
-import com.example.smartdoctor.viewmodel.SignupViewModel
+import com.example.smartdoctor.viewmodel.account.SignupViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.onCompletion
-import kotlinx.coroutines.flow.onErrorReturn
-import kotlinx.coroutines.flow.onStart
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -110,7 +94,7 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
-    private fun checkPassword(pass1: String, pass2: String): Boolean {
+    fun checkPassword(pass1: String, pass2: String): Boolean {
         if (checkSamePassword(pass1, pass2)) {
             if (checkPasswordLength(pass1)) {
                 return true

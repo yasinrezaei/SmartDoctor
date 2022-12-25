@@ -27,7 +27,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
     
     def to_representation(self, instance):
         rep = super(UserProfileSerializer, self).to_representation(instance)
-        rep['user_id'] = instance.user.username
+        rep['user_id'] = instance.user_id.username
         rep['city'] = instance.city.city_name
         return rep 
 
@@ -38,6 +38,11 @@ class ChatSerializer(serializers.ModelSerializer):
     class Meta:
         model = Chat
         fields="__all__"
+    def to_representation(self, instance):
+        rep = super(ChatSerializer, self).to_representation(instance)
+        rep['user_id'] = instance.user_id.full_name
+        rep['doctor_id'] = instance.doctor_id.full_name
+        return rep
 class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Message

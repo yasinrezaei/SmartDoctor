@@ -18,6 +18,7 @@
             android:orientation="horizontal"
             android:gravity="right">
             <TextView
+                android:id="@+id/usernameTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="زهرا دهقانی"

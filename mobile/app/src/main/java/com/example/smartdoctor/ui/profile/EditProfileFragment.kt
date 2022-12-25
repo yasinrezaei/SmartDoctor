@@ -4,10 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.smartdoctor.data.model.ProfileModel
 import com.example.smartdoctor.databinding.FragmentEditProfileBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class EditProfileFragment : BottomSheetDialogFragment() {
+class EditProfileFragment(var profile: ProfileModel?) : BottomSheetDialogFragment() {
     lateinit var binding:FragmentEditProfileBinding
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,6 +23,14 @@ class EditProfileFragment : BottomSheetDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply {
+            edtFullName.setText(profile?.fullName ?: " ")
+            edtNationalCode.setText(profile?.nationalCode?:" ")
+            edtAge.setText(profile?.age.toString())
+            edtCity.setText(profile?.city)
+            edtAddress.setText(profile?.address)
+
+
+
             editProfileBtn.setOnClickListener {
                 dismiss()
             }
