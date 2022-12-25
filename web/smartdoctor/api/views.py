@@ -51,6 +51,19 @@ class EditUserProfileView(UpdateAPIView):
 
 
 #----------------------------Chat and message---------------------------------------
+#get chat messages
+#http://127.0.0.1:8000/api/chat-messages?chat_id=1
+class ChatMessagesView(APIView):
+    def get(self,request):
+        try:
+            chats=Message.objects.filter(chat=request.query_params['chat_id'])
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
+        ser=MessageSerializer(chats,many=True)
+        return Response(ser.data,status=status.HTTP_200_OK)
+
+
 #create chat 
 #http://127.0.0.1:8000/api/create-chat/
 class CreateChatView(ListCreateAPIView):

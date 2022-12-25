@@ -43,6 +43,7 @@ class ChatSerializer(serializers.ModelSerializer):
         rep['user_id'] = instance.user_id.full_name
         rep['doctor_id'] = instance.doctor_id.full_name
         return rep
+
 class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Message

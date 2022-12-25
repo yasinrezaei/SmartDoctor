@@ -1,9 +1,6 @@
 package com.example.smartdoctor.data.server
 
-import com.example.smartdoctor.data.model.ChatsListModel
-import com.example.smartdoctor.data.model.ProfileModel
-import com.example.smartdoctor.data.model.TokenModel
-import com.example.smartdoctor.data.model.UserModel
+import com.example.smartdoctor.data.model.*
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -23,5 +20,7 @@ interface ApiService {
 
     @GET("user-chats-list/")
     suspend fun getUserAllChats(@Header("Authorization") token:String,@Query("profile_id") profileId: Int): Response<ChatsListModel>
+    @GET("chat-messages/")
+    suspend fun getChatMessages(@Header("Authorization") token:String,@Query("chat_id") chatId: Int) : Response<MessageListModel>
 
 }

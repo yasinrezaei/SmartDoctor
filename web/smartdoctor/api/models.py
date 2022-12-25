@@ -101,7 +101,7 @@ class Chat(models.Model):
         verbose_name_plural = ' گفت و گو ها'
 class Message(models.Model):
     chat = models.ForeignKey(Chat,on_delete=models.CASCADE, blank=True, null=True,verbose_name ="چت")
-    text = models.TextField(verbose_name="متن پیام")
+    text = models.TextField(verbose_name="متن پیام",blank=True,null=True)
     sender_id = models.ForeignKey(UserProfile,on_delete=models.CASCADE, blank=True, null=True,verbose_name ="فرستنده",related_name='sender')
     date = models.DateTimeField(auto_now_add=True,verbose_name="زمان")
     class Meta:
