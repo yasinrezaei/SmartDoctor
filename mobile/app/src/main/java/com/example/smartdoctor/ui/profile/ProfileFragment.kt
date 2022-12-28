@@ -6,17 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.smartdoctor.R
+import com.example.smartdoctor.data.model.ProfileModel
 import com.example.smartdoctor.databinding.FragmentProfileBinding
 import com.example.smartdoctor.ui.account.LoginActivity
+import com.example.smartdoctor.utils.CheckConnection
 import com.example.smartdoctor.utils.SaveData
 import com.example.smartdoctor.viewmodel.profile.ProfileViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class ProfileFragment : Fragment() {
@@ -25,10 +29,10 @@ class ProfileFragment : Fragment() {
     lateinit var binding: FragmentProfileBinding
     private val viewModel: ProfileViewModel by viewModels()
 
-    private lateinit var tokenValue:String
     private lateinit var saveData: SaveData
 
-
+    @Inject
+    lateinit var connection: CheckConnection
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,8 +40,6 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         saveData = SaveData(context)
-
-
         binding = FragmentProfileBinding.inflate(inflater,container,false)
         return binding.root
 
@@ -45,60 +47,23 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //show progressbar
         showProgressBar()
 
+        //check connection and ...
+        checkConnectionAndSendRequest()
 
+
+        //observe on profile
         viewModel.profile.observe(viewLifecycleOwner){
-            binding.apply {
-                hideProgressBar()
-                val animationFadeIn = AnimationUtils.loadAnimation(context, R.anim.fade_in)
-                if(it.gender.equals("male")){
-                    prodileImage.setBackgroundResource(R.drawable.male)
-                    prodileImage.startAnimation(animationFadeIn)
-                }else{
-                    prodileImage.setBackgroundResource(R.drawable.female)
-                    prodileImage.startAnimation(animationFadeIn)
-                }
-
-                fullname.text = it.fullName
-                fullname.startAnimation(animationFadeIn)
-                username.text = it.userId
-                username.startAnimation(animationFadeIn)
-                address.text = "آدرس : "+it.address
-                address.startAnimation(animationFadeIn)
-                nationalCode.text ="کد ملی : "+ it.nationalCode
-                nationalCode.startAnimation(animationFadeIn)
-                city.text = "شهر : "+it.city
-                city.startAnimation(animationFadeIn)
-                age.text = "سن : "+it.age+" سال"
-                age.startAnimation(animationFadeIn)
-
-
-
-
-
-
-
-
-            }
+            setProfileViw(it)
         }
 
-        GlobalScope.launch(Dispatchers.IO) {
-            saveData.getToken.collect{
-                viewModel.getUserProfile("token $it",16)
-            }
+        //observe on get profile error
+        viewModel.error.observe(viewLifecycleOwner){
+            Toast.makeText(context,it,Toast.LENGTH_SHORT).show()
         }
-
-
-
-
-
-
-
-
-
-
-
 
         binding.apply {
             logoutBtn.setOnClickListener {
@@ -112,7 +77,78 @@ class ProfileFragment : Fragment() {
             }
 
             editBtn.setOnClickListener {
-                EditProfileFragment(viewModel.profile.value).show(parentFragmentManager,EditProfileFragment(viewModel.profile.value).tag)
+                var editProfileFragment = EditProfileFragment(viewModel.profile.value)
+                editProfileFragment.show(parentFragmentManager,editProfileFragment.tag)
+
+                editProfileFragment.onProfileEdit = {
+                    viewModel.profile.postValue(it)
+                }
+
+            }
+        }
+
+    }
+
+    private fun setProfileViw(it: ProfileModel) {
+        binding.apply {
+            hideProgressBar()
+            val animationFadeIn = AnimationUtils.loadAnimation(context, R.anim.fade_in)
+            if(it.gender.equals("male")){
+                prodileImage.setBackgroundResource(R.drawable.male)
+                prodileImage.startAnimation(animationFadeIn)
+            }else{
+                prodileImage.setBackgroundResource(R.drawable.female)
+                prodileImage.startAnimation(animationFadeIn)
+            }
+
+            fullname.text = it.fullName
+            fullname.startAnimation(animationFadeIn)
+            username.text = it.userId
+            username.startAnimation(animationFadeIn)
+            address.text = "آدرس : "+it.address
+            address.startAnimation(animationFadeIn)
+            nationalCode.text ="کد ملی : "+ it.nationalCode
+            nationalCode.startAnimation(animationFadeIn)
+            city.text = "شهر : "+it.city
+            city.startAnimation(animationFadeIn)
+            age.text = "سن : "+it.age+" سال"
+            age.startAnimation(animationFadeIn)
+
+        }
+    }
+
+    private fun checkConnectionAndSendRequest() {
+
+        binding.apply {
+            connectionConstraint.visibility = View.VISIBLE
+            profileDetailLinear.visibility = View.GONE
+            headConstraintLayout.visibility = View.GONE
+        }
+
+
+
+        connection.observe(viewLifecycleOwner){
+            if(it){
+                // ok connection
+                binding.apply {
+                    connectionConstraint.visibility = View.GONE
+                    profileDetailLinear.visibility = View.VISIBLE
+                    headConstraintLayout.visibility = View.VISIBLE
+                }
+                GlobalScope.launch(Dispatchers.IO) {
+                    saveData.getToken.collect{
+                        viewModel.getUserProfile("token $it",16)
+                    }
+                }
+
+            }
+            //no connection
+            else{
+                binding.apply {
+                    connectionConstraint.visibility = View.VISIBLE
+                    profileDetailLinear.visibility = View.GONE
+                    headConstraintLayout.visibility = View.GONE
+                }
             }
         }
     }
@@ -124,4 +160,5 @@ class ProfileFragment : Fragment() {
     private fun showProgressBar() {
         binding.progressBar.visibility = View.VISIBLE
     }
+
 }

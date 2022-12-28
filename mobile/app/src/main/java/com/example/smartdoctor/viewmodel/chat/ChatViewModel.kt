@@ -14,10 +14,20 @@ import javax.inject.Inject
 @HiltViewModel
 class ChatViewModel @Inject constructor(private val repository: ChatRepository) : ViewModel(){
         val chatsList = MutableLiveData<ChatsListModel>()
+        val errorOrEmpty = MutableLiveData<String>()
 
         fun loadChatsList(token:String,profileId:Int) = viewModelScope.launch (Dispatchers.IO){
             repository.getUserAllChats(token,profileId).collect{
-                chatsList.postValue(it.body())
+                if(it.isSuccessful){
+                    chatsList.postValue(it.body())
+                }
+                else if(it.body()!!.isEmpty()){
+                    errorOrEmpty.postValue("شما هیچ گفت و گویی نداشته اید!")
+                }
+                else{
+                    errorOrEmpty.postValue("خطا در دریافت گفت و گو ها!")
+                }
+
             }
         }
 

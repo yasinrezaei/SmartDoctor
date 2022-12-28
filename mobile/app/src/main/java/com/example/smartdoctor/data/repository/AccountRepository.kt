@@ -1,5 +1,7 @@
 package com.example.smartdoctor.data.repository
 
+import android.util.Log
+import com.example.smartdoctor.data.model.ProfileBodyModel
 import com.example.smartdoctor.data.model.ProfileModel
 import com.example.smartdoctor.data.model.TokenModel
 import com.example.smartdoctor.data.model.UserModel
@@ -28,6 +30,13 @@ class AccountRepository @Inject constructor(private val apiService: ApiService){
     suspend fun userLogin(userModel: UserModel):Flow<Response<TokenModel>>{
         return flow {
             emit(apiService.userLogin(userModel))
+        }.flowOn(Dispatchers.IO)
+    }
+
+    suspend fun editUserProfile(token:String,profileId:Int,profileBodyModel: ProfileBodyModel) : Flow<Response<ProfileModel>>{
+        Log.e("hoom", "repo" )
+        return flow {
+            emit(apiService.editUserProfile(token,profileId,profileBodyModel))
         }.flowOn(Dispatchers.IO)
     }
 }

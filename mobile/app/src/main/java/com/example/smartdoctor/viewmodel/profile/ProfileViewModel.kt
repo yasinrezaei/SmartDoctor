@@ -17,13 +17,18 @@ import javax.inject.Inject
 @HiltViewModel
 class ProfileViewModel @Inject constructor(private val accountRepository: AccountRepository) : ViewModel() {
     val profile = MutableLiveData<ProfileModel>()
-
-
-
+    val error = MutableLiveData<String>()
     fun getUserProfile(token:String,userId:Int){
         viewModelScope.launch {
             accountRepository.getUserProfile(token,userId).collect{
-                profile.postValue(it.body())
+                if(it.isSuccessful){
+                    profile.postValue(it.body())
+                }
+                else{
+                    error.postValue("پروفایل دریافت نشد!")
+                }
+
+
             }
         }
     }

@@ -1,12 +1,9 @@
 package com.example.smartdoctor.data.server
 
+import androidx.room.PrimaryKey
 import com.example.smartdoctor.data.model.*
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.POST
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface ApiService {
     @POST("api-register-user")
@@ -22,5 +19,9 @@ interface ApiService {
     suspend fun getUserAllChats(@Header("Authorization") token:String,@Query("profile_id") profileId: Int): Response<ChatsListModel>
     @GET("chat-messages/")
     suspend fun getChatMessages(@Header("Authorization") token:String,@Query("chat_id") chatId: Int) : Response<MessageListModel>
+
+
+    @PUT("edit-user-profile/{id}")
+    suspend fun editUserProfile(@Header("Authorization") token:String,@Path("id") profileId:Int ,@Body profileBodyModel: ProfileBodyModel) : Response<ProfileModel>
 
 }

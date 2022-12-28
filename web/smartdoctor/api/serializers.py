@@ -2,7 +2,7 @@ from django.db import models
 from django.db.models import fields
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import UserProfile,Chat,Message
+from .models import UserProfile,Chat,Message,City
 
 
 class CreateUserSerializer(serializers.ModelSerializer):
@@ -47,4 +47,10 @@ class ChatSerializer(serializers.ModelSerializer):
 class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Message
+        fields="__all__"
+
+#----------------------------city--------
+class CitySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = City
         fields="__all__"

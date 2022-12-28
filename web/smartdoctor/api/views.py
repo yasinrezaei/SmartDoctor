@@ -8,8 +8,8 @@ from rest_framework.permissions import AllowAny,IsAuthenticated
 from rest_framework.generics import ListCreateAPIView,RetrieveDestroyAPIView, RetrieveUpdateDestroyAPIView, UpdateAPIView,RetrieveUpdateAPIView,CreateAPIView
 from django.contrib.auth.models import User
 from rest_framework import permissions
-from .serializers import CreateUserSerializer,UserProfileSerializer,ChatSerializer,MessageSerializer
-from .models import UserProfile,Chat,Message
+from .serializers import CreateUserSerializer,UserProfileSerializer,ChatSerializer,MessageSerializer,CitySerializer
+from .models import UserProfile,Chat,Message,City
 
 
 
@@ -50,6 +50,17 @@ class EditUserProfileView(UpdateAPIView):
     serializer_class=UserProfileSerializer 
 
 
+
+#-----------------------------City-----------------------------------
+#http://127.0.0.1:8000/api/city-list/
+class CityListView(ListCreateAPIView):
+    permission_classes = [
+        permissions.AllowAny 
+    ]
+    queryset=City.objects.all()
+    serializer_class=CitySerializer
+
+
 #----------------------------Chat and message---------------------------------------
 #get chat messages
 #http://127.0.0.1:8000/api/chat-messages?chat_id=1
@@ -67,11 +78,9 @@ class ChatMessagesView(APIView):
 #create chat 
 #http://127.0.0.1:8000/api/create-chat/
 class CreateChatView(ListCreateAPIView):
-    permission_classes = [
-        permissions.AllowAny 
-    ]
     queryset=Chat.objects.all()
     serializer_class=ChatSerializer
+
 
 #delete chat
 #http://127.0.0.1:8000/api/delete-chat/2

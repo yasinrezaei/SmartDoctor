@@ -17,6 +17,22 @@ class City(models.Model):
         verbose_name = 'شهر '
         verbose_name_plural = 'شهر ها'
 
+#-----------------------------medical expertise -----------
+class MedicalExpertise(models.Model):
+    medical_expertise_name = models.CharField(verbose_name = "نام تخصص", max_length=50,unique=True)
+    def __str__(self):
+        return self.medical_expertise_name
+    #for foreign key default value :)
+    @classmethod
+    def get_default_pk(cls):
+        medical_expertise, created = cls.objects.get_or_create(
+            medical_expertise_name='ندارد ', 
+        )
+        return medical_expertise.pk
+    class Meta:
+        verbose_name = 'تخصص '
+        verbose_name_plural = 'تخصص ها'
+
 #----------------------User Profile--------------------------
 GENDER_CHOICES = (
     ('female','زن'),
@@ -33,6 +49,7 @@ class UserProfile(models.Model):
   city = models.ForeignKey(City,verbose_name="شهر",on_delete=models.PROTECT,blank=True,null=True, default=City.get_default_pk)
   address = models.CharField(max_length = 255,verbose_name="آدرس",blank=True,null=True)
   gender = models.CharField(max_length=6, choices=GENDER_CHOICES, default='male',verbose_name="جنسیت")
+  medical_expertise = models.ForeignKey(MedicalExpertise,verbose_name="تخصص",on_delete=models.PROTECT,blank=True,null=True, default=MedicalExpertise.get_default_pk)
   def __str__(self):
         return self.full_name
   class Meta:
