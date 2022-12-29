@@ -24,8 +24,8 @@ test_y = test_df.iloc[:, 132]
 
 # define classification algorithm
 # first let's define max depth
-raw_clf = tree.DecisionTreeClassifier()
-raw_clf = raw_clf.fit(train_x,train_y)
+#raw_clf = tree.DecisionTreeClassifier()
+#raw_clf = raw_clf.fit(train_x,train_y)
 #print(clf.tree_.max_depth) --> result is 54
 
 dt_clf = tree.DecisionTreeClassifier(max_depth = 54, criterion = "entropy")
