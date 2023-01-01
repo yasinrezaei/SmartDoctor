@@ -16,4 +16,8 @@ class MessageListModel : ArrayList<MessageListModel.MessageItem>(){
         @SerializedName("text")
         val text: String
     )
+
+    override fun add(element: MessageItem): Boolean {
+        return super.add(element)
+    }
 }

@@ -2,6 +2,7 @@ package com.example.smartdoctor.ui.profile
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +20,7 @@ import com.example.smartdoctor.viewmodel.profile.ProfileViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -58,6 +60,10 @@ class ProfileFragment : Fragment() {
         //observe on profile
         viewModel.profile.observe(viewLifecycleOwner){
             setProfileViw(it)
+            GlobalScope.launch(Dispatchers.IO) {
+                saveData.saveProfileId(it.id)
+            }
+
         }
 
         //observe on get profile error
@@ -129,6 +135,7 @@ class ProfileFragment : Fragment() {
 
         connection.observe(viewLifecycleOwner){
             if(it){
+
                 // ok connection
                 binding.apply {
                     connectionConstraint.visibility = View.GONE
@@ -136,8 +143,10 @@ class ProfileFragment : Fragment() {
                     headConstraintLayout.visibility = View.VISIBLE
                 }
                 GlobalScope.launch(Dispatchers.IO) {
-                    saveData.getToken.collect{
-                        viewModel.getUserProfile("token $it",16)
+                    saveData.getToken.collect{ token ->
+                        saveData.getUserId.collect{ userId ->
+                            viewModel.getUserProfile("token $token",userId!!)
+                        }
                     }
                 }
 

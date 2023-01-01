@@ -70,34 +70,62 @@
                 android:hint="سن"
                 android:background="@drawable/bg_circle_white"
                 android:padding="10dp"/>
-            <EditText
-                android:id="@+id/edtCity"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/editCityLinear"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:gravity="right"
-                android:inputType="number"
-                android:layout_marginTop="20dp"
                 app:layout_constraintTop_toBottomOf="@id/edtAge"
                 app:layout_constraintRight_toRightOf="@id/edtAge"
                 app:layout_constraintLeft_toLeftOf="@id/edtAge"
-                android:hint="شهر"
-                android:background="@drawable/bg_circle_white"
-                android:padding="10dp"/>
+                android:orientation="horizontal"
+                android:weightSum="4">
+                <ImageView
+                    android:id="@+id/editCityBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_baseline_edit_location_alt_24"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    />
+                <EditText
+                    android:id="@+id/edtCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_circle_white"
+                    android:ems="10"
+                    android:hint="شهر"
+                    android:padding="10dp"
+                    android:inputType="none"
+                    android:layout_weight="3"
+                    android:editable="false"/>
+
+            </LinearLayout>
+
+
             <EditText
                 android:id="@+id/edtAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:ems="10"
                 android:gravity="right"
-                android:inputType="number"
                 android:layout_marginTop="20dp"
-                app:layout_constraintTop_toBottomOf="@id/edtCity"
-                app:layout_constraintRight_toRightOf="@id/edtCity"
-                app:layout_constraintLeft_toLeftOf="@id/edtCity"
+                app:layout_constraintTop_toBottomOf="@id/editCityLinear"
+                app:layout_constraintRight_toRightOf="@id/editCityLinear"
+                app:layout_constraintLeft_toLeftOf="@id/editCityLinear"
                 android:hint="آدرس"
                 android:background="@drawable/bg_circle_white"
                 android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/txtGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="انتخاب جنسیت"
+                app:layout_constraintEnd_toEndOf="@+id/edtAddress"
+                app:layout_constraintStart_toStartOf="@+id/edtAddress"
+                app:layout_constraintTop_toBottomOf="@+id/edtAddress"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/editProfileBtn"
@@ -106,7 +134,7 @@
                 android:layout_marginTop="20dp"
                 app:layout_constraintEnd_toEndOf="@+id/edtAddress"
                 app:layout_constraintStart_toStartOf="@+id/edtAddress"
-                app:layout_constraintTop_toBottomOf="@+id/edtAddress"
+                app:layout_constraintTop_toBottomOf="@+id/txtGender"
                 android:background="@drawable/bg_login_btn"
                 android:text="ویرایش"
                 />

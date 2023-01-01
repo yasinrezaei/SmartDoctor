@@ -2,10 +2,12 @@ package com.example.smartdoctor.ui.account
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.MutableLiveData
 import com.example.smartdoctor.data.model.UserModel
 import com.example.smartdoctor.databinding.ActivityLoginBinding
 import com.example.smartdoctor.ui.MainActivity
@@ -28,10 +30,9 @@ class LoginActivity : AppCompatActivity() {
     private var connectionStatus:Boolean = false
 
 
-
-
-
     private lateinit var saveData:SaveData
+
+    private var isLoginTime = MutableLiveData<Boolean>()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,30 +50,21 @@ class LoginActivity : AppCompatActivity() {
 
         binding.apply {
             viewModel.token.observe(this@LoginActivity){
-                progressBar.visibility = View.GONE
-                Toast.makeText(
-                    this@LoginActivity,
-                    "ورود با موفقیت انجام شد",
-                    Toast.LENGTH_SHORT
-                ).show()
-
-
-               GlobalScope.launch (Dispatchers.IO){
-                   saveToken(it.token)
-               }
-
-
-                val intent = Intent(this@LoginActivity,MainActivity::class.java)
-                startActivity(intent)
-                finish()
-
-
-
-
-
-
-
+                GlobalScope.launch (Dispatchers.IO){
+                    saveToken(it.token)
+                }
+                var username = editTextTextPersonName.text
+                viewModel.getUserId("token ${it.token}",username.toString())
             }
+
+            viewModel.userId.observe(this@LoginActivity){ userId ->
+
+                GlobalScope.launch (Dispatchers.IO){
+                    saveData.saveUserId(userId)
+                    isLoginTime.postValue(true)
+                }
+            }
+
             viewModel.error.observe(this@LoginActivity){
                 progressBar.visibility = View.GONE
                 Toast.makeText(
@@ -80,6 +72,23 @@ class LoginActivity : AppCompatActivity() {
                     "خطا در ورود!",
                     Toast.LENGTH_SHORT
                 ).show()
+            }
+
+            isLoginTime.observe(this@LoginActivity){
+                if(it){
+                    progressBar.visibility = View.GONE
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "ورود با موفقیت انجام شد",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+
+                    val intent = Intent(this@LoginActivity,MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+
             }
 
 
@@ -116,7 +125,7 @@ class LoginActivity : AppCompatActivity() {
 
     suspend fun saveToken(token:String){
         GlobalScope.launch {
-            saveData.saveToDataStore(token,1)
+            saveData.saveToken(token)
         }
     }
 

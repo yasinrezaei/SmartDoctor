@@ -1,3 +1,12 @@
 package com.example.smartdoctor.data.model
 
-data class UserModel (var id:Int,var username:String,var password:String)
+
+import com.google.gson.annotations.SerializedName
+
+data class UserModel(
+    @SerializedName("id")
+    val id: Int,
+    @SerializedName("username")
+    val username: String,
+    val password:String
+)

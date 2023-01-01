@@ -1,6 +1,7 @@
 package com.example.smartdoctor.data.repository
 
 import com.example.smartdoctor.data.model.ChatsListModel
+import com.example.smartdoctor.data.model.MessageBodyModel
 import com.example.smartdoctor.data.model.MessageListModel
 import com.example.smartdoctor.data.server.ApiService
 import kotlinx.coroutines.Dispatchers
@@ -21,6 +22,12 @@ class ChatRepository @Inject constructor(private val apiService: ApiService) {
     suspend fun getChatAllMessages(token: String, chatId: Int): Flow<Response<MessageListModel>> {
         return flow {
             emit(apiService.getChatMessages(token,chatId))
+        }.flowOn(Dispatchers.IO)
+    }
+
+    suspend fun createMessage(token: String,messageBodyModel: MessageBodyModel) : Flow<Response<MessageListModel.MessageItem>>{
+        return flow {
+            emit(apiService.createMessage(token,messageBodyModel))
         }.flowOn(Dispatchers.IO)
     }
 

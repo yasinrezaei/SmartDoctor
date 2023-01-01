@@ -28,7 +28,8 @@ class UserProfileSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         rep = super(UserProfileSerializer, self).to_representation(instance)
         rep['user_id'] = instance.user_id.username
-        rep['city'] = instance.city.city_name
+        rep['city_name'] = instance.city.city_name
+        rep['medical_expertise'] = instance.medical_expertise.medical_expertise_name
         return rep 
 
     
@@ -54,3 +55,9 @@ class CitySerializer(serializers.ModelSerializer):
     class Meta:
         model = City
         fields="__all__"
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields=("id","username")

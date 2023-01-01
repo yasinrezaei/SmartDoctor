@@ -17,6 +17,7 @@ import com.example.smartdoctor.utils.CheckConnection
 import com.example.smartdoctor.utils.SaveData
 import com.example.smartdoctor.viewmodel.chat.ChatViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -106,8 +107,10 @@ class ChatFragment : Fragment() {
                 }
 
                 viewLifecycleOwner.lifecycleScope.launch{
-                    saveData.getToken.collect{
-                        viewModel.loadChatsList("token $it" ,16)
+                    saveData.getToken.collect{ token ->
+                        saveData.getProfileId.collect{ profileId ->
+                            viewModel.loadChatsList("token $token" , profileId!!)
+                        }
                     }
                 }
 

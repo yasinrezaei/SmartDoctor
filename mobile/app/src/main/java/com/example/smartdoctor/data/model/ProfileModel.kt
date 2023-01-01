@@ -8,7 +8,7 @@ data class ProfileModel(
     val address: String,
     @SerializedName("age")
     val age: Int,
-    @SerializedName("city")
+    @SerializedName("city_name")
     val city: String,
     @SerializedName("full_name")
     val fullName: String,
@@ -23,5 +23,7 @@ data class ProfileModel(
     @SerializedName("isDoctor")
     val isDoctor: Boolean,
     @SerializedName("user_id")
-    val userId: String
+    val userId: String,
+    @SerializedName("city")
+    val cityId: Int
 )

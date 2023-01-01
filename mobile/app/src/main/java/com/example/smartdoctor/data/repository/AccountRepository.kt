@@ -39,4 +39,11 @@ class AccountRepository @Inject constructor(private val apiService: ApiService){
             emit(apiService.editUserProfile(token,profileId,profileBodyModel))
         }.flowOn(Dispatchers.IO)
     }
+
+
+    suspend fun getUserId(token:String,username:String):Flow<Response<UserModel>>{
+        return flow<Response<UserModel>> {
+            emit(apiService.getUserId(token,username))
+        }.flowOn(Dispatchers.IO)
+    }
 }

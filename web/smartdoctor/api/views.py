@@ -8,7 +8,7 @@ from rest_framework.permissions import AllowAny,IsAuthenticated
 from rest_framework.generics import ListCreateAPIView,RetrieveDestroyAPIView, RetrieveUpdateDestroyAPIView, UpdateAPIView,RetrieveUpdateAPIView,CreateAPIView
 from django.contrib.auth.models import User
 from rest_framework import permissions
-from .serializers import CreateUserSerializer,UserProfileSerializer,ChatSerializer,MessageSerializer,CitySerializer
+from .serializers import CreateUserSerializer,UserProfileSerializer,ChatSerializer,MessageSerializer,CitySerializer,UserSerializer
 from .models import UserProfile,Chat,Message,City
 
 
@@ -21,6 +21,16 @@ class CreateUserView(CreateAPIView):
         permissions.AllowAny 
     ]
     serializer_class = CreateUserSerializer 
+#http://127.0.0.1:8000/api/user-detail?username=yasin
+class GetUserDetailView(APIView):
+    def get(self,request):
+        try:
+            user=User.objects.get(username = request.query_params['username'])
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
+        ser=UserSerializer(user)
+        return Response(ser.data,status=status.HTTP_200_OK)
 
 #------------------ create profile -------------------
 class CreateUserProfileView(CreateAPIView): 

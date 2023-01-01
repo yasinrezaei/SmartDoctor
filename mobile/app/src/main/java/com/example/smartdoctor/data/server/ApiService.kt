@@ -19,9 +19,20 @@ interface ApiService {
     suspend fun getUserAllChats(@Header("Authorization") token:String,@Query("profile_id") profileId: Int): Response<ChatsListModel>
     @GET("chat-messages/")
     suspend fun getChatMessages(@Header("Authorization") token:String,@Query("chat_id") chatId: Int) : Response<MessageListModel>
+    @POST("create-message/")
+    suspend fun createMessage(@Header("Authorization") token:String,@Body messageBodyModel: MessageBodyModel) : Response<MessageListModel.MessageItem>
 
 
     @PUT("edit-user-profile/{id}")
     suspend fun editUserProfile(@Header("Authorization") token:String,@Path("id") profileId:Int ,@Body profileBodyModel: ProfileBodyModel) : Response<ProfileModel>
+
+    @GET("city-list/")
+    suspend fun getCitiesList():Response<CityListModel>
+
+    @GET("user-detail/")
+    suspend fun getUserId(@Header("Authorization") token:String,@Query("username") username: String):Response<UserModel>
+
+
+
 
 }

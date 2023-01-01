@@ -6,10 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.smartdoctor.data.model.UserModel
 import com.example.smartdoctor.data.repository.AccountRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import retrofit2.Response
 import javax.inject.Inject
 
 @HiltViewModel

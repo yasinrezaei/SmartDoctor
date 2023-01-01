@@ -56,13 +56,6 @@ class MessageAdapter constructor(private val profileId:Int) : RecyclerView.Adapt
                     layoutGchatContainerMe.visibility = View.GONE
                     textGchatTimestampMe.visibility =View.GONE
                 }
-
-
-
-
-
-
-
             }
         }
     }
