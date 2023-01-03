@@ -79,8 +79,8 @@ BOOKING_PERIOD = (
 
 
 class Booking(models.Model):
-    user = models.ForeignKey(User,on_delete=models.CASCADE, blank=True, null=True,verbose_name ="بیمار",related_name='normal_user')
-    doctor = models.ForeignKey(User,verbose_name="پزشک",on_delete=models.PROTECT,blank=True,null=True,related_name='doctor_user')
+    user = models.ForeignKey(UserProfile,on_delete=models.CASCADE, blank=True, null=True,verbose_name ="بیمار",related_name='normal_user')
+    doctor = models.ForeignKey(UserProfile,verbose_name="پزشک",on_delete=models.PROTECT,blank=True,null=True,related_name='doctor_user')
     date = models.DateField(verbose_name="تاریخ")
     time = models.TimeField(verbose_name="ساعت")
     approved = models.BooleanField(default=True,verbose_name="تایید شده")
@@ -89,17 +89,14 @@ class Booking(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self) -> str:
-        return self.user_name or "(No Name)"
+        return self.user.full_name or "(No Name)"
     class Meta:
         verbose_name = 'نوبت'
         verbose_name_plural = ' نوبت ها'
 
 class BookingSettings(models.Model):
-    # Doctor
     doctor = models.ForeignKey(UserProfile,verbose_name="پزشک",on_delete=models.PROTECT,blank=True,null=True)
-    # Date
     max_booking_per_day = models.IntegerField(null=True, blank=True,verbose_name="حداکثر بیمار در روز")
-    # Time
     start_time = models.TimeField(verbose_name="ساعت شروع کار")
     end_time = models.TimeField(verbose_name="ساعت پایان کار")
     period_of_each_booking = models.CharField(max_length=3, default="30", choices=BOOKING_PERIOD, verbose_name="زمان هر نوبت")

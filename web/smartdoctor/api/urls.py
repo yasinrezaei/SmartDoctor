@@ -1,9 +1,13 @@
 from collections import UserList
 from django.urls import path
 from rest_framework.authtoken.views import obtain_auth_token
-from .views import CreateUserView,UserProfileDetailView,CreateUserProfileView,EditUserProfileView,CreateChatView,DeleteChatView,CreateMessageView,DeleteUpdateMessageView,UserChatsListView,DoctorChatsListView,ChatMessagesView,CityListView,GetUserDetailView
-
+from .views import CreateUserView,UserProfileDetailView,CreateUserProfileView,EditUserProfileView,CreateChatView,DeleteChatView,CreateMessageView,DeleteUpdateMessageView,UserChatsListView,DoctorChatsListView,ChatMessagesView,CityListView,GetUserDetailView,CreateBookingView,UserBookingListView,DoctorBookingListView,DoctorBookingSettingsView
+from . import views
 urlpatterns = [
+
+    #test
+    path("test/",views.createCity),
+
     
     #authenticate
     path('api-token-auth/', obtain_auth_token), 
@@ -33,4 +37,12 @@ urlpatterns = [
 
     #city list
     path('city-list/',CityListView.as_view()),
+
+    #booking
+    path('create-booking/',CreateBookingView.as_view()),
+    path('user-bookings/',UserBookingListView.as_view()),
+    path('doctor-bookings/',DoctorBookingListView.as_view()),
+
+    #doctor-booking-settings
+    path('doctor-booking-settings/',DoctorBookingSettingsView.as_view())
 ]
