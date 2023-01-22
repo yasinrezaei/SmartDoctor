@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models import signals
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
 #---------------City------------------------------
 class City(models.Model):
     city_name = models.CharField(verbose_name = "نام شهر", max_length=50,unique=True)
@@ -123,6 +126,25 @@ class Message(models.Model):
         verbose_name_plural = ' پیام ها'
 
 
+#--------------------Medical test----------------
+
+class MedicalTest(models.Model):
+    user_id = models.ForeignKey(UserProfile,on_delete=models.CASCADE, blank=True, null=True,verbose_name ="بیمار")
+    test_input = models.CharField(max_length=200,verbose_name="ورودی تست")
+    date = models.DateTimeField(auto_now_add=True,verbose_name="زمان")
+    def __str__(self):
+        return self.user_id.full_name
+    class Meta:
+        verbose_name = 'تست پزشکی'
+        verbose_name_plural = ' تست های پزشکی'
 
 
-
+#--------------------------Medical test response ----------
+class MedicalTestResponse(models.Model):
+  test_id = models.ForeignKey(MedicalTest,verbose_name="تست",on_delete=models.PROTECT,blank=True,null=True)
+  test_response = models.CharField(max_length=100,verbose_name="بیماری")
+  def __str__(self):
+        return self.test_response
+  class Meta:
+        verbose_name = 'پاسخ تست  '
+        verbose_name_plural = 'پاسخ های تست '

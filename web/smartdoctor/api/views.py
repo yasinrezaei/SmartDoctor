@@ -8,15 +8,23 @@ from rest_framework.permissions import AllowAny,IsAuthenticated
 from rest_framework.generics import ListCreateAPIView,RetrieveDestroyAPIView, RetrieveUpdateDestroyAPIView, UpdateAPIView,RetrieveUpdateAPIView,CreateAPIView
 from django.contrib.auth.models import User
 from rest_framework import permissions
-from .serializers import CreateUserSerializer,UserProfileSerializer,ChatSerializer,MessageSerializer,CitySerializer,UserSerializer,BookingSerializer,BookingSettingsSerializer
-from .models import UserProfile,Chat,Message,City,Booking,BookingSettings
+from .serializers import CreateUserSerializer,UserProfileSerializer,ChatSerializer,MessageSerializer,CitySerializer,UserSerializer,BookingSerializer,BookingSettingsSerializer,MedicalTestSerializer,MedicalTestResponseSerializer
+from .models import UserProfile,Chat,Message,City,Booking,BookingSettings,MedicalTest,MedicalTestResponse
 from . import a
 from django.http import HttpResponse
+import json
+
+
+
+
 #----------------------test---------------
 def createCity(request):
     message = a.sayHello()
     a.createCity("bandar")
     return HttpResponse("<Html> <h1>"+message+"</h1></Html>")
+
+def createResponse(test_id):
+    a.createResponse(test_id)
 
 #--------------------user-------------------
 #http://127.0.0.1:8000/api/api-register-user
@@ -136,8 +144,48 @@ class DoctorChatsListView(APIView):
 
         ser=ChatSerializer(chats,many=True)
         return Response(ser.data,status=status.HTTP_200_OK)
+#---------------------Medical test-----------
+class CreateMedicalTestView(ListCreateAPIView):
+    permission_classes = [
+        permissions.AllowAny 
+    ]
+    queryset=MedicalTest.objects.all()
+    serializer_class=MedicalTestSerializer
 
+#get user tests
+class UserMedicalTestsListView(APIView):
+    permission_classes = [
+        permissions.AllowAny 
+    ]
+    def get(self,request):
+        try:
+            chats = MedicalTest.objects.filter(user_id = request.query_params['profile_id'] ) 
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
 
+        ser=MedicalTestSerializer(chats,many=True)
+        return Response(ser.data,status=status.HTTP_200_OK)
+
+#-------------------------------
+class GetResponseView(APIView):
+    permission_classes = [
+        permissions.AllowAny 
+    ]
+    def get(self,request):
+        a.createResponse(int(request.query_params['test_id']))
+        return Response(status=status.HTTP_200_OK)
+class GetMedicalTestResponseDetailView(APIView):
+    permission_classes = [
+        permissions.AllowAny 
+    ]
+    def get(self,request):
+        try:
+            response=MedicalTestResponse.objects.get(test_id = request.query_params['test_id'])
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
+        ser=MedicalTestResponseSerializer(response)
+        return Response(ser.data,status=status.HTTP_200_OK)
 #-------------------booking--------------------
 #http://127.0.0.1:8000/api/create-booking/
 class CreateBookingView(ListCreateAPIView):
@@ -168,9 +216,6 @@ class DoctorBookingListView(APIView):
 #-------------------booking settings--------------------
 #http://127.0.0.1:8000/api/doctor-booking-settings/?profile_id=2
 class DoctorBookingSettingsView(APIView):
-    permission_classes = [
-        permissions.AllowAny 
-    ]
     def get(self,request):
         try:
             setting = BookingSettings.objects.get(doctor = request.query_params['profile_id'] ) 

@@ -6,8 +6,6 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.smartdoctor.data.model.ReserveModel
-import com.example.smartdoctor.data.model.TestModel
-import com.example.smartdoctor.databinding.ItemLastMedicalTestBinding
 import com.example.smartdoctor.databinding.ItemReserveBinding
 import javax.inject.Inject
 

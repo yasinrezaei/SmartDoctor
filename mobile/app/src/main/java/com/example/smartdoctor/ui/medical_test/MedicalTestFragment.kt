@@ -1,31 +1,47 @@
 package com.example.smartdoctor.ui.medical_test
 
-import android.net.wifi.WifiConfiguration.AuthAlgorithm.strings
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.smartdoctor.R
-import com.example.smartdoctor.data.model.TestModel
+import com.example.smartdoctor.data.model.MedicalTestListModel
 import com.example.smartdoctor.databinding.FragmentMedicalTestBinding
+import com.example.smartdoctor.utils.CheckConnection
+import com.example.smartdoctor.utils.SaveData
+import com.example.smartdoctor.viewmodel.medical_test.MedicalTestViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class MedicalTestFragment :Fragment() {
-    lateinit var binding: FragmentMedicalTestBinding
+class MedicalTestFragment : Fragment() {
 
+    lateinit var binding: FragmentMedicalTestBinding
     @Inject
     lateinit var testAdapter: LastMedicalTestAdapter
+    private val viewModel: MedicalTestViewModel by viewModels()
+    private lateinit var saveData: SaveData
+    @Inject
+    lateinit var connection: CheckConnection
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentMedicalTestBinding.inflate(inflater,container,false)
+        binding = FragmentMedicalTestBinding.inflate(inflater, container, false)
+        saveData = SaveData(context)
+
+
         return binding.root
     }
 
@@ -34,27 +50,56 @@ class MedicalTestFragment :Fragment() {
 
         binding.apply {
 
-            var testModel1 = TestModel(1,"تست شماره 1","تاریخ : 02-04-1401","ساعت : 12:30")
-            var testModel2 = TestModel(2,"تست شماره 2","تاریخ : 08-04-1401","ساعت : 22:28")
-            var testModel3 = TestModel(3,"تست شماره 3","تاریخ : 09-06-1401","ساعت : 12:45")
-            var testModel4 = TestModel(4,"تست شماره 4","تاریخ : 11-02-1401","ساعت : 18:30")
-            var testModel5 = TestModel(5,"تست شماره 5","تاریخ : 03-08-1401","ساعت : 21:25")
+            //check connection and send request
+            checkConnectionAndSendRequest()
 
-            var list = listOf(testModel1,testModel2,testModel3,testModel4,testModel5)
-            testAdapter.differ.submitList(list)
+            //observe on medical tests list
+            viewModel.medicalTestsList.observe(viewLifecycleOwner){
+                testAdapter.differ.submitList(it)
+            }
+
+
+            //observe on error or empty
+            viewModel.errorOrEmpty.observe(viewLifecycleOwner){
+                Toast.makeText(context,it, Toast.LENGTH_SHORT).show()
+            }
+
+
+            testAdapter.onItemClick ={
+                val intent = Intent(context,MedicalTestDetailActivity::class.java)
+                intent.putExtra("test_id",it.id)
+                context?.startActivity(intent)
+            }
 
 
             help.setOnClickListener {
-                HelpDialogFragment(getString(R.string.help_text_medical_test)).show(parentFragmentManager,HelpDialogFragment(getString(R.string.help_text_medical_test)).tag)
+                HelpDialogFragment(getString(R.string.help_text_medical_test)).show(
+                    parentFragmentManager,
+                    HelpDialogFragment(getString(R.string.help_text_medical_test)).tag
+                )
             }
 
             lastTestRecycler.apply {
                 adapter = testAdapter
-                layoutManager  = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+                layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+            }
+
+            createNewTestBtn.setOnClickListener {
+                CreateTestDialog().show(parentFragmentManager, CreateTestDialog().tag)
             }
 
         }
 
 
+    }
+
+    private fun checkConnectionAndSendRequest(){
+        viewLifecycleOwner.lifecycleScope.launch{
+            saveData.getToken.collect{ token ->
+                saveData.getProfileId.collect{ profileId ->
+                    viewModel.loadMedicalTests("token $token" , profileId!!)
+                }
+            }
+        }
     }
 }

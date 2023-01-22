@@ -17,7 +17,7 @@
         android:theme="@style/Theme.SmartDoctor"
         tools:targetApi="31">
         <activity
-            android:name=".ui.SplashActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,9 +30,11 @@
                 android:value="" />
         </activity>
         <activity android:name=".ui.chat.ChatDetailActivity"/>
-        <activity android:name=".ui.MainActivity"/>
+        <activity android:name=".ui.SplashActivity"/>
         <activity android:name=".ui.account.LoginActivity"/>
         <activity android:name=".ui.account.signup.SignupActivity"/>
+        <activity android:name=".ui.medical_test.DoMedicalTestActivity"/>
+        <activity android:name=".ui.medical_test.MedicalTestDetailActivity"/>
     </application>
 
 </manifest>

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import UserProfile,City,Booking,BookingSettings,Chat,Message,MedicalExpertise
+from .models import UserProfile,City,Booking,BookingSettings,Chat,Message,MedicalExpertise,MedicalTest,MedicalTestResponse
 
 
 #---------------------------------------------
@@ -29,6 +29,15 @@ class CityAdmin(admin.ModelAdmin):
     search_fields=('city_name',)
 
 admin.site.register(City,CityAdmin)
+
+#--------------------------------------------
+class MedicalTestAdmin(admin.ModelAdmin):
+    list_display=('user_id','date')
+admin.site.register(MedicalTest,MedicalTestAdmin)
+
+class MedicalTestResponseAdmin(admin.ModelAdmin):
+    list_display=('test_id','test_response')
+admin.site.register(MedicalTestResponse,MedicalTestResponseAdmin)
 
 #--------------------------------------------
 class UserProfileAdmin(admin.ModelAdmin):

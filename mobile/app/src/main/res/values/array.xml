@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--nose-->
+    <string-array name="nose_english">
+        <item>continuous_sneezing</item>
+        <item>runny_nose</item>
+        <item>loss_of_smell</item>
+        <item>red_sore_around_nose</item>
+    </string-array>
+
+    <!--mouth_tooth-->
+    <string-array name="mouth_tooth_english">
+        <item>ulcers_on_tongue</item>
+        <item>cough</item>
+        <item>drying_and_tingling_lips</item>
+    </string-array>
+
+    <!--heart_chest-->
+
+    <string-array name="heart_chest_english">
+        <item>chest_pain</item>
+        <item>fast_heart_rate</item>
+        <item>palpitations</item>
+    </string-array>
+
+
+    <!--waist_neck-->
+    <string-array name="waist_neck_english">
+        <item>back_pain</item>
+        <item>neck_pain</item>
+        <item>stiff_neck</item>
+    </string-array>
+    <!--public-->
+    <string-array name="public_english">
+        <item>shivering</item>
+        <item>chills</item>
+        <item>vomiting</item>
+        <item>fatigue</item>
+        <item>weight_gain</item>
+        <item>irregular_sugar_level</item>
+        <item>high_fever</item>
+        <item>breathlessness</item>
+        <item>sweating</item>
+        <item>dehydration</item>
+        <item>headache</item>
+        <item>nausea</item>
+        <item>mild_fever</item>
+        <item>malaise</item>
+        <item>blurred_and_distorted_vision</item>
+        <item>sinus_pressure</item>
+        <item>congestion</item>
+        <item>dizziness</item>
+        <item>bruising</item>
+        <item>obesity</item>
+        <item>swollen_extremeties</item>
+        <item>slurred_speech</item>
+        <item>internal_itching</item>
+        <item>toxic_look_(typhos)</item>
+        <item>visual_disturbances</item>
+    </string-array>
+
+
+    <!--eye-->
+    <string-array name="eye_english">
+        <item>sunken_eyes</item>
+        <item>pain_behind_the_eyes</item>
+        <item>yellowing_of_eyes</item>
+        <item>redness_of_eyes</item>
+        <item>puffy_face_and_eyes</item>
+        <item>watering_from_eyes</item>
+    </string-array>
+
+    <!--throat-->
+    <string-array name="throat_english">
+        <item>patches_in_throat</item>
+        <item>swelled_lymph_nodes</item>
+        <item>phlegm</item>
+        <item>throat_irritation</item>
+        <item>enlarged_thyroid</item>
+        <item>mucoid_sputum</item>
+        <item>rusty_sputum</item>
+        <item>blood_in_sputum</item>
+    </string-array>
+
+
+
+    <!--hand and foot-->
+    <string-array name="hand_foot_english">
+        <item>cold_hands_and_feets</item>
+        <item>weakness_in_limbs</item>
+        <item>swollen_legs</item>
+        <item>brittle_nails</item>
+        <item>prominent_veins_on_calf</item>
+        <item>painful_walking</item>
+        <item>small_dents_in_nails</item>
+        <item>inflammatory_nails</item>
+    </string-array>
+
+    <!--psychological-->
+
+    <string-array name="psychological_english">
+        <item>anxiety</item>
+        <item>mood_swings</item>
+        <item>weight_loss</item>
+        <item>restlessness</item>
+        <item>lethargy</item>
+        <item>depression</item>
+        <item>irritability</item>
+        <item>altered_sensorium</item>
+        <item>lack_of_concentration</item>
+        <item>scurring</item>
+    </string-array>
+
+    <!--joint_muscle-->
+    <string-array name="joint_muscle_english">
+        <item>joint_pain</item>
+        <item>muscle_wasting</item>
+        <item>cramps</item>
+        <item>knee_pain</item>
+        <item>hip_joint_pain</item>
+        <item>muscle_weakness</item>
+        <item>swelling_joints</item>
+        <item>muscle_pain</item>
+    </string-array>
+
+    <string-array name="other_english">
+        <item>swollen_blood_vessels</item>
+        <item>extra_marital_contacts</item>
+        <item>abnormal_menstruation</item>
+        <item>family_history</item>
+        <item>receiving_blood_transfusion</item>
+        <item>receiving_unsterile_injections</item>
+        <item>coma</item>
+        <item>history_of_alcohol_consumption</item>
+    </string-array>
+
+    <string-array name="stomach_digestion_english">
+        <item>stomach_pain</item>
+        <item>acidity</item>
+        <item>indigestion</item>
+        <item>loss_of_appetite</item>
+        <item>abdominal_pain</item>
+        <item>acute_liver_failure</item>
+        <item>swelling_of_stomach</item>
+        <item>pain_during_bowel_movements</item>
+        <item>xcessive_hunger</item>
+        <item>passage_of_gases</item>
+        <item>belly_pain</item>
+        <item>increased_appetite</item>
+        <item>stomach_bleeding</item>
+        <item>distention_of_abdomen</item>
+        <item>fluid_overload</item>
+    </string-array>
+
+    <string-array name="excretory_system_english">
+        <item>burning_micturition</item>
+        <item>spotting_urination</item>
+        <item>dark_urine</item>
+        <item>constipation</item>
+        <item>diarrhoea</item>
+        <item>yellow_urine</item>
+        <item>fluid_overload</item>
+        <item>pain_in_anal_region</item>
+        <item>bloody_stool</item>
+        <item>irritation_in_anus</item>
+        <item>bladder_discomfort</item>
+        <item>foul_smell_of_urine</item>
+        <item>continuous_feel_of_urine</item>
+        <item>polyuria</item>
+    </string-array>
+
+    <!--skin-->
+    <string-array name="skin_english">
+        <item>itching</item>
+        <item>skin_rash</item>
+        <item>nodal_skin_eruptions</item>
+        <item>yellowish_skin</item>
+        <item>red_spots_over_body</item>
+        <item>dischromic_patches</item>
+        <item>pus_filled_pimples</item>
+        <item>blackheads</item>
+        <item>skin_peeling</item>
+        <item>silver_like_dusting</item>
+        <item>blister</item>
+        <item>yellow_crust_ooze</item>
+    </string-array>
+    <string-array name="skin_persian">
+        <item>خارش</item>
+        <item>کهیر</item>
+        <item>تاول پوستی</item>
+        <item>زردی پوست</item>
+        <item>لکه های قرمز روی بدن</item>
+        <item>لکه های پوستی</item>
+        <item>جوش های چرکی</item>
+        <item>جوش های سر سیاه</item>
+        <item>پوست پوست شدن</item>
+        <item>خاکستری شدن رنگ پوست</item>
+        <item>تاول</item>
+        <item>ترشح پوست زرد</item>
+    </string-array>
+
+
+    <!--movement-->
+    <string-array name="movement_english">
+        <item>movement_stiffness</item>
+        <item>spinning_movements</item>
+        <item>loss_of_balance</item>
+        <item>unsteadiness</item>
+        <item>weakness_of_one_body_side</item>
+    </string-array>
+    <string-array name="movement_persian">
+        <item>سختی حرکت کردن</item>
+        <item>حرکات چرخشی</item>
+        <item>عدم تعادل</item>
+        <item>بی ثباتی</item>
+        <item>ضعف یک سمت بدن</item>
+    </string-array>
+
+
+    <!--all tests-->
+    <string-array name="all_tests">
+        <item>itching</item>
+        <item>skin_rash</item>
+        <item>nodal_skin_eruptions</item>
+        <item>continuous_sneezing</item>
+        <item>shivering</item>
+        <item>chills</item>
+        <item>joint_pain</item>
+        <item>stomach_pain</item>
+        <item>acidity</item>
+        <item>ulcers_on_tongue</item>
+        <item>muscle_wasting</item>
+        <item>vomiting</item>
+        <item>burning_micturition</item>
+        <item>spotting_ urination</item>
+        <item>fatigue</item>
+        <item>weight_gain</item>
+        <item>anxiety</item>
+        <item>cold_hands_and_feets</item>
+        <item>mood_swings</item>
+        <item>weight_loss</item>
+        <item>restlessness</item>
+        <item>lethargy</item>
+        <item>patches_in_throat</item>
+        <item>irregular_sugar_level</item>
+        <item>cough</item>
+        <item>high_fever</item>
+        <item>sunken_eyes</item>
+        <item>breathlessness</item>
+        <item>sweating</item>
+        <item>dehydration</item>
+        <item>indigestion</item>
+        <item>headache</item>
+        <item>yellowish_skin</item>
+        <item>dark_urine</item>
+        <item>nausea</item>
+        <item>loss_of_appetite</item>
+        <item>pain_behind_the_eyes</item>
+        <item>back_pain</item>
+        <item>constipation</item>
+        <item>abdominal_pain</item>
+        <item>diarrhoea</item>
+        <item>mild_fever</item>
+        <item>yellow_urine</item>
+        <item>yellowing_of_eyes</item>
+        <item>acute_liver_failure</item>
+        <item>fluid_overload</item>
+        <item>swelling_of_stomach</item>
+        <item>swelled_lymph_nodes</item>
+        <item>malaise</item>
+        <item>blurred_and_distorted_vision</item>
+        <item>phlegm</item>
+        <item>throat_irritation</item>
+        <item>redness_of_eyes</item>
+        <item>sinus_pressure</item>
+        <item>runny_nose</item>
+        <item>congestion</item>
+        <item>chest_pain</item>
+        <item>weakness_in_limbs</item>
+        <item>fast_heart_rate</item>
+        <item>pain_during_bowel_movements</item>
+        <item>pain_in_anal_region</item>
+        <item>bloody_stool</item>
+        <item>irritation_in_anus</item>
+        <item>neck_pain</item>
+        <item>dizziness</item>
+        <item>cramps</item>
+        <item>bruising</item>
+        <item>obesity</item>
+        <item>swollen_legs</item>
+        <item>swollen_blood_vessels</item>
+        <item>puffy_face_and_eyes</item>
+        <item>enlarged_thyroid</item>
+        <item>brittle_nails</item>
+        <item>swollen_extremeties</item>
+        <item>excessive_hunger</item>
+        <item>extra_marital_contacts</item>
+        <item>drying_and_tingling_lips</item>
+        <item>slurred_speech</item>
+        <item>knee_pain</item>
+        <item>hip_joint_pain</item>
+        <item>muscle_weakness</item>
+        <item>stiff_neck</item>
+        <item>swelling_joints</item>
+        <item>movement_stiffness</item>
+        <item>spinning_movements</item>
+        <item>loss_of_balance</item>
+        <item>unsteadiness</item>
+        <item>weakness_of_one_body_side</item>
+        <item>loss_of_smell</item>
+        <item>bladder_discomfort</item>
+        <item>foul_smell_of_urine</item>
+        <item>continuous_feel_of_urine</item>
+        <item>passage_of_gases</item>
+        <item>internal_itching</item>
+        <item>toxic_look_(typhos)</item>
+        <item>depression</item>
+        <item>irritability</item>
+        <item>muscle_pain</item>
+        <item>altered_sensorium</item>
+        <item>red_spots_over_body</item>
+        <item>belly_pain</item>
+        <item>abnormal_menstruation</item>
+        <item>dischromic_patches</item>
+        <item>watering_from_eyes</item>
+        <item>increased_appetite</item>
+        <item>polyuria</item>
+        <item>family_history</item>
+        <item>mucoid_sputum</item>
+        <item>rusty_sputum</item>
+        <item>lack_of_concentration</item>
+        <item>visual_disturbances</item>
+        <item>receiving_blood_transfusion</item>
+        <item>receiving_unsterile_injections</item>
+        <item>coma</item>
+        <item>stomach_bleeding</item>
+        <item>distention_of_abdomen</item>
+        <item>history_of_alcohol_consumption</item>
+        <item>fluid_overload</item>
+        <item>blood_in_sputum</item>
+        <item>prominent_veins_on_calf</item>
+        <item>palpitations</item>
+        <item>painful_walking</item>
+        <item>pus_filled_pimples</item>
+        <item>blackheads</item>
+        <item>scurring</item>
+        <item>skin_peeling</item>
+        <item>silver_like_dusting</item>
+        <item>small_dents_in_nails</item>
+        <item>inflammatory_nails</item>
+        <item>blister</item>
+        <item>red_sore_around_nose</item>
+        <item>yellow_crust_ooze</item>
+    </string-array>
+
+
+</resources>

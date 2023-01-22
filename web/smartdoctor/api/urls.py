@@ -1,14 +1,21 @@
 from collections import UserList
 from django.urls import path
 from rest_framework.authtoken.views import obtain_auth_token
-from .views import CreateUserView,UserProfileDetailView,CreateUserProfileView,EditUserProfileView,CreateChatView,DeleteChatView,CreateMessageView,DeleteUpdateMessageView,UserChatsListView,DoctorChatsListView,ChatMessagesView,CityListView,GetUserDetailView,CreateBookingView,UserBookingListView,DoctorBookingListView,DoctorBookingSettingsView
+from .views import CreateUserView,UserProfileDetailView,CreateUserProfileView,EditUserProfileView,CreateChatView,DeleteChatView,CreateMessageView,DeleteUpdateMessageView,UserChatsListView,DoctorChatsListView,ChatMessagesView,CityListView,GetUserDetailView,CreateBookingView,UserBookingListView,DoctorBookingListView,DoctorBookingSettingsView,CreateMedicalTestView,UserMedicalTestsListView,GetResponseView,GetMedicalTestResponseDetailView
 from . import views
 urlpatterns = [
 
     #test
     path("test/",views.createCity),
-
     
+    path('get-response',GetResponseView.as_view()),
+
+    #medical test
+    path('user-medical-tests-list/', UserMedicalTestsListView.as_view()),
+    path('create-medical-test', CreateMedicalTestView.as_view()),
+    path('medical-test-response-detail/', GetMedicalTestResponseDetailView.as_view()),
+
+
     #authenticate
     path('api-token-auth/', obtain_auth_token), 
 

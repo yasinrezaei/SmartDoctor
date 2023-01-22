@@ -23,6 +23,13 @@ interface ApiService {
     suspend fun createMessage(@Header("Authorization") token:String,@Body messageBodyModel: MessageBodyModel) : Response<MessageListModel.MessageItem>
 
 
+    @POST("create-medical-test")
+    suspend fun createMedicalTest(@Header("Authorization") token:String,@Body medicalTestBodyModel: MedicalTestBodyModel) : Response<MedicalTestListModel.MedicalTestItem>
+
+    @GET("get-response")
+    suspend fun getResponse(@Header("Authorization") token:String,@Query("test_id") test_id: Int)
+
+
     @PUT("edit-user-profile/{id}")
     suspend fun editUserProfile(@Header("Authorization") token:String,@Path("id") profileId:Int ,@Body profileBodyModel: ProfileBodyModel) : Response<ProfileModel>
 
@@ -32,7 +39,12 @@ interface ApiService {
     @GET("user-detail/")
     suspend fun getUserId(@Header("Authorization") token:String,@Query("username") username: String):Response<UserModel>
 
+    @GET("user-medical-tests-list/")
+    suspend fun getUserMedicalTests(@Header("Authorization") token:String,@Query("profile_id") profileId: Int) : Response<MedicalTestListModel>
 
+
+    @GET("medical-test-response-detail/")
+    suspend fun getMedicalTestResponseDetail(@Header("Authorization") token:String,@Query("test_id") testId: Int) : Response<MedicalTestDetailResponseModel>
 
 
 }
