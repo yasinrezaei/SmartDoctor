@@ -9,11 +9,23 @@
         <item>red_sore_around_nose</item>
     </string-array>
 
+    <string-array name="nose_persian">
+        <item>عطسه مداوم</item>
+        <item>آبریزش بینی</item>
+        <item>از دست دادن بویایی</item>
+        <item>قرمزی بینی</item>
+    </string-array>
+
     <!--mouth_tooth-->
     <string-array name="mouth_tooth_english">
         <item>ulcers_on_tongue</item>
         <item>cough</item>
         <item>drying_and_tingling_lips</item>
+    </string-array>
+    <string-array name="mouth_tooth_persian">
+        <item>زخم شدن زبان</item>
+        <item>سرفه</item>
+        <item>خشکی و سوزش لب</item>
     </string-array>
 
     <!--heart_chest-->
@@ -23,6 +35,11 @@
         <item>fast_heart_rate</item>
         <item>palpitations</item>
     </string-array>
+    <string-array name="heart_chest_persian">
+        <item>درد قفسه سینه</item>
+        <item>ضربان قلب بالا</item>
+        <item>تپش قلب</item>
+    </string-array>
 
 
     <!--waist_neck-->
@@ -30,6 +47,11 @@
         <item>back_pain</item>
         <item>neck_pain</item>
         <item>stiff_neck</item>
+    </string-array>
+    <string-array name="waist_neck_persian">
+        <item>درد کمر</item>
+        <item>درد گردن</item>
+        <item>گرفتگی گردن</item>
     </string-array>
     <!--public-->
     <string-array name="public_english">
@@ -60,6 +82,34 @@
         <item>visual_disturbances</item>
     </string-array>
 
+    <string-array name="public_persian">
+        <item>لرزیدن</item>
+        <item>احساس سرما</item>
+        <item>استفراغ</item>
+        <item>خستگی</item>
+        <item>افزایش وزن</item>
+        <item>قند خون نامتعارف</item>
+        <item>تب بالا</item>
+        <item>تنگی نفس</item>
+        <item>عرق کردن</item>
+        <item>کم آبی بدن</item>
+        <item>سردرد</item>
+        <item>حالت تهوع</item>
+        <item>تب خفیف</item>
+        <item>احساس مریضی</item>
+        <item>تاری دید</item>
+        <item>فشار سینوسی</item>
+        <item>گرفتگی</item>
+        <item>سرگیجه</item>
+        <item>کبودی</item>
+        <item>چاقی</item>
+        <item>تورم بدن</item>
+        <item>لکنت زبان</item>
+        <item>خارش داخلی</item>
+        <item>تیفوس</item>
+        <item>اختلالات بصری</item>
+    </string-array>
+
 
     <!--eye-->
     <string-array name="eye_english">
@@ -69,6 +119,14 @@
         <item>redness_of_eyes</item>
         <item>puffy_face_and_eyes</item>
         <item>watering_from_eyes</item>
+    </string-array>
+    <string-array name="eye_persian">
+        <item>گودی چشم زیاد</item>
+        <item>درد پشت چشم</item>
+        <item>زردی چشم</item>
+        <item>قرمزی چشم</item>
+        <item>پف صورت و چشم</item>
+        <item>آبریزش چشم</item>
     </string-array>
 
     <!--throat-->
@@ -82,8 +140,16 @@
         <item>rusty_sputum</item>
         <item>blood_in_sputum</item>
     </string-array>
-
-
+    <string-array name="throat_persian">
+        <item>التهاب لوزه</item>
+        <item>تورم غدد لنفاوی</item>
+        <item>خلط (بلغم)</item>
+        <item>تحریک گلو</item>
+        <item>تیروئید کم کار</item>
+        <item>خلط مخاطی</item>
+        <item>خلط زنگ زده</item>
+        <item>خلط خونی</item>
+    </string-array>
 
     <!--hand and foot-->
     <string-array name="hand_foot_english">
@@ -95,6 +161,16 @@
         <item>painful_walking</item>
         <item>small_dents_in_nails</item>
         <item>inflammatory_nails</item>
+    </string-array>
+    <string-array name="hand_foot_persian">
+        <item>سردی دست و پا</item>
+        <item>ضعف دست و پا</item>
+        <item>تورم پا</item>
+        <item>ناخن های شکننده</item>
+        <item>بیرون زدن رگهای ساق پا</item>
+        <item>راه رفتن با درد</item>
+        <item>فرورفتگی ناخن ها</item>
+        <item>التهاب ناخن ها</item>
     </string-array>
 
     <!--psychological-->
@@ -111,7 +187,18 @@
         <item>lack_of_concentration</item>
         <item>scurring</item>
     </string-array>
-
+    <string-array name="psychological_persian">
+        <item>اضطراب</item>
+        <item>نوسانات خلقی</item>
+        <item>کاش وزن</item>
+        <item>بی قراری</item>
+        <item>بی حالی</item>
+        <item>افسردگی</item>
+        <item>زود رنجی</item>
+        <item>تغییر حواس</item>
+        <item>کمبود تمرکز</item>
+        <item>هیجان (عجله)</item>
+    </string-array>
     <!--joint_muscle-->
     <string-array name="joint_muscle_english">
         <item>joint_pain</item>
@@ -122,6 +209,16 @@
         <item>muscle_weakness</item>
         <item>swelling_joints</item>
         <item>muscle_pain</item>
+    </string-array>
+    <string-array name="joint_muscle_persian">
+        <item>درد مفاصل</item>
+        <item>تحلیل رفتن عضلات</item>
+        <item>گرفتگی عضلات</item>
+        <item>درد زانو</item>
+        <item>درد مفاصل ران</item>
+        <item>ضعف عضله</item>
+        <item>تورم مفاصل</item>
+        <item>درد عضله</item>
     </string-array>
 
     <string-array name="other_english">
@@ -152,7 +249,25 @@
         <item>distention_of_abdomen</item>
         <item>fluid_overload</item>
     </string-array>
+    <string-array name="stomach_digestion_persian">
+        <item>دل درد</item>
+        <item>اسیدی بودن</item>
+        <item>سوء هاضمه</item>
+        <item>کاهش اشتها</item>
+        <item>درد شکم</item>
+        <item>نارسایی حاد کبد</item>
+        <item>تورم معده</item>
+        <item>درد روده</item>
+        <item>گرسنگی بیش از حد</item>
+        <item>معده گازی</item>
+        <item>درد معده</item>
+        <item>افزایش اشتها</item>
+        <item>خونریزی معده</item>
+        <item>تورم ناحیه شکم</item>
+        <item>دفع نکردن مایعات</item>
+    </string-array>
 
+    <!--excretory_system-->
     <string-array name="excretory_system_english">
         <item>burning_micturition</item>
         <item>spotting_urination</item>
@@ -168,6 +283,22 @@
         <item>foul_smell_of_urine</item>
         <item>continuous_feel_of_urine</item>
         <item>polyuria</item>
+    </string-array>
+    <string-array name="excretory_system_persian">
+        <item>سوزش ادرار</item>
+        <item>ادرار خونی</item>
+        <item>ادرار تیره</item>
+        <item>یبوست</item>
+        <item>اسهال</item>
+        <item>ادرار زرد</item>
+        <item>مایع اضافه در بدن</item>
+        <item>درد مقعدی</item>
+        <item>مدفوع خونی</item>
+        <item>تحریک مقعدی</item>
+        <item>ناراحتی مثانه</item>
+        <item>بوی بد ادرار</item>
+        <item>احساس مداوم ادرار</item>
+        <item>تکرر ادرار</item>
     </string-array>
 
     <!--skin-->
@@ -353,6 +484,177 @@
         <item>red_sore_around_nose</item>
         <item>yellow_crust_ooze</item>
     </string-array>
+    
+    
+    
+    <string-array name="desease_english">
+        <item>Fungal infection</item>
+        <item>Allergy</item>
+        <item>GERD</item>
+        <item>Chronic cholestasis</item>
+        <item>Drug Reaction</item>
+        <item>Peptic ulcer diseae</item>
+        <item>AIDS</item>
+        <item>Diabetes</item>
+        <item>Gastroenteritis</item>
+        <item>Bronchial Asthma</item>
+        <item>Hypertension</item>
+        <item>Migraine</item>
+        <item>Cervical spondylosis</item>
+        <item>Paralysis (brain hemorrhage)</item>
+        <item>Jaundice</item>
+        <item>Malaria</item>
+        <item>Chicken pox</item>
+        <item>Dengue</item>
+        <item>Typhoid</item>
+        <item>hepatitis A</item>
+        <item>Hepatitis B</item>
+        <item>Hepatitis C</item>
+        <item>Hepatitis D</item>
+        <item>Hepatitis E</item>
+        <item>Alcoholic hepatitis</item>
+        <item>Tuberculosis</item>
+        <item>Common Cold</item>
+        <item>Pneumonia</item>
+        <item>Dimorphic hemmorhoids(piles)</item>
+        <item>Heart attack</item>
+        <item>Varicose veins</item>
+        <item>Hypothyroidism</item>
+        <item>Hyperthyroidism</item>
+        <item>Hypoglycemia</item>
+        <item>Osteoarthristis</item>
+        <item>Arthritis</item>
+        <item>(vertigo) Paroymsal  Positional Vertigo</item>
+        <item>Acne</item>
+        <item>Urinary tract infection</item>
+        <item>Psoriasis</item>
+        <item>Impetigo</item>
+    </string-array>
+    <string-array name="desease_persian">
+        <item>عفونت قارچی</item>
+        <item>آلرژی</item>
+        <item>رفلاکس معده به مری</item>
+        <item>کلستاز مزمن ( کبدی )</item>
+        <item>حساسیت دارویی</item>
+        <item>زخم معده</item>
+        <item>ایدز</item>
+        <item>دیابت</item>
+        <item>التهاب معده ای</item>
+        <item>آسم</item>
+        <item>فشار خون</item>
+        <item>میگرن</item>
+        <item>آرتروز گردن</item>
+        <item>خونریزی مغزی</item>
+        <item>زردی ( یرغان )</item>
+        <item>مالاریا</item>
+        <item>آبله مرغان</item>
+        <item>تب دنگی</item>
+        <item>حصبه</item>
+        <item>هپیاتیت A</item>
+        <item>هپاتیت B</item>
+        <item>هپاتیت C</item>
+        <item>هپاتیت D</item>
+        <item>هپاتیت E</item>
+        <item>هپاتیت الکلی</item>
+        <item>بیماری سل</item>
+        <item>سرما خوردگی</item>
+        <item>ذات الریه</item>
+        <item>بواسیر</item>
+        <item>حمله قلبی</item>
+        <item>رگهای واریسی</item>
+        <item>کم کاری تیروئید</item>
+        <item>پرکاری تیروئید</item>
+        <item>هیپوگلیسمی ( کم قند خونی )</item>
+        <item>آرتروز</item>
+        <item>آرتروز</item>
+        <item>سرگیجه</item>
+        <item>آکنه</item>
+        <item>عفونت مجاری ادراری</item>
+        <item>صدفک</item>
+        <item>زرد زخم</item>
+    </string-array>
+
+
+
+
+
+
+
+    <!--for finding doctors-->
+    <string-array name="skin_expertise">
+        <item>Fungal infection</item>
+        <item>Acne</item>
+        <item>Psoriasis</item>
+        <item>Impetigo</item>
+    </string-array>
+
+    <string-array name="public_expertise">
+        <item>Allergy</item>
+        <item>Drug Reaction</item>
+        <item>Migraine</item>
+        <item>Chicken pox</item>
+        <item>Common Cold</item>
+        <item>Pneumonia</item>
+        <item>(vertigo) Paroymsal  Positional Vertigo</item>
+    </string-array>
+    <string-array name="digestion_expertise">
+        <item>GERD</item>
+        <item>Peptic ulcer diseae</item>
+        <item>Gastroenteritis</item>
+        <item>Paralysis (brain hemorrhage)</item>
+        <item>Dimorphic hemmorhoids(piles)</item>
+    </string-array>
+    <string-array name="internist_expertise">
+        <item>Chronic cholestasis</item>
+        <item>Dengue</item>
+        <item>Typhoid</item>
+    </string-array>
+    <string-array name="blood_expertise">
+        <item>AIDS</item>
+        <item>Diabetes</item>
+        <item>Hypertension</item>
+        <item>Malaria</item>
+        <item>hepatitis A</item>
+        <item>Hepatitis B</item>
+        <item>Hepatitis C</item>
+        <item>Hepatitis D</item>
+        <item>Hepatitis E</item>
+        <item>Alcoholic hepatitis</item>
+        <item>Hypoglycemia</item>
+    </string-array>
+
+    <string-array name="breathing_expertise">
+        <item>Bronchial Asthma</item>
+        <item>Tuberculosis</item>
+    </string-array>
+
+    <string-array name="physiotherapist_expertise">
+        <item>Cervical spondylosis</item>
+        <item>Osteoarthristis</item>
+        <item>Arthritis</item>
+    </string-array>
+
+    <string-array name="children_expertise">
+        <item>Jaundice</item>
+    </string-array>
+    <string-array name="heart_expertise">
+        <item>Heart attack</item>
+        <item>Varicose veins</item>
+    </string-array>
+    <string-array name="glands_expertise">
+        <item>Hypothyroidism</item>
+        <item>Hyperthyroidism</item>
+    </string-array>
+    <string-array name="kidney_expertise">
+        <item>Urinary tract infection</item>
+    </string-array>
+
+
+
+
+
+
+
 
 
 </resources>

@@ -56,81 +56,120 @@ class DoMedicalTestActivity : AppCompatActivity() ,OnItemClickListener{
                     )
                 }
                 "eye" -> {
+                    for(i in resources.getStringArray(R.array.eye_english)){
+                        testTypeItemsEnglish.add(i)
+                    }
                     arrayAdapter = ArrayAdapter(
                         applicationContext, android.R.layout.simple_list_item_multiple_choice,
-                        resources.getStringArray(R.array.skin_persian)
+                        resources.getStringArray(R.array.eye_persian)
                     )
                 }
                 "mouth_tooth" -> {
+                    for(i in resources.getStringArray(R.array.mouth_tooth_english)){
+                        testTypeItemsEnglish.add(i)
+                    }
                     arrayAdapter = ArrayAdapter(
                         applicationContext, android.R.layout.simple_list_item_multiple_choice,
-                        resources.getStringArray(R.array.skin_persian)
+                        resources.getStringArray(R.array.mouth_tooth_persian)
                     )
                 }
                 "heart_chest" -> {
+                    for(i in resources.getStringArray(R.array.heart_chest_english)){
+                        testTypeItemsEnglish.add(i)
+                    }
                     arrayAdapter = ArrayAdapter(
                         applicationContext, android.R.layout.simple_list_item_multiple_choice,
-                        resources.getStringArray(R.array.skin_persian)
+                        resources.getStringArray(R.array.heart_chest_persian)
                     )
                 }
                 "stomach_digestion" -> {
+                    for(i in resources.getStringArray(R.array.stomach_digestion_english)){
+                        testTypeItemsEnglish.add(i)
+                    }
                     arrayAdapter = ArrayAdapter(
                         applicationContext, android.R.layout.simple_list_item_multiple_choice,
-                        resources.getStringArray(R.array.skin_persian)
+                        resources.getStringArray(R.array.stomach_digestion_persian)
                     )
                 }
                 "joint_muscle" -> {
+                    for(i in resources.getStringArray(R.array.joint_muscle_english)){
+                        testTypeItemsEnglish.add(i)
+                    }
                     arrayAdapter = ArrayAdapter(
                         applicationContext, android.R.layout.simple_list_item_multiple_choice,
-                        resources.getStringArray(R.array.skin_persian)
+                        resources.getStringArray(R.array.joint_muscle_persian)
                     )
                 }
                 "throat" -> {
+                    for(i in resources.getStringArray(R.array.throat_english)){
+                        testTypeItemsEnglish.add(i)
+                    }
                     arrayAdapter = ArrayAdapter(
                         applicationContext, android.R.layout.simple_list_item_multiple_choice,
-                        resources.getStringArray(R.array.skin_persian)
+                        resources.getStringArray(R.array.throat_persian)
                     )
                 }
                 "waist_neck" -> {
+                    for(i in resources.getStringArray(R.array.waist_neck_english)){
+                        testTypeItemsEnglish.add(i)
+                    }
                     arrayAdapter = ArrayAdapter(
                         applicationContext, android.R.layout.simple_list_item_multiple_choice,
-                        resources.getStringArray(R.array.skin_persian)
+                        resources.getStringArray(R.array.waist_neck_persian)
                     )
                 }
                 "nose" -> {
+                    for(i in resources.getStringArray(R.array.nose_english)){
+                        testTypeItemsEnglish.add(i)
+                    }
                     arrayAdapter = ArrayAdapter(
                         applicationContext, android.R.layout.simple_list_item_multiple_choice,
-                        resources.getStringArray(R.array.skin_persian)
+                        resources.getStringArray(R.array.nose_persian)
                     )
                 }
                 "excretory_system" -> {
+                    for(i in resources.getStringArray(R.array.excretory_system_english)){
+                        testTypeItemsEnglish.add(i)
+                    }
                     arrayAdapter = ArrayAdapter(
                         applicationContext, android.R.layout.simple_list_item_multiple_choice,
-                        resources.getStringArray(R.array.skin_persian)
+                        resources.getStringArray(R.array.excretory_system_persian)
                     )
                 }
                 "psychological" -> {
+                    for(i in resources.getStringArray(R.array.psychological_english)){
+                        testTypeItemsEnglish.add(i)
+                    }
                     arrayAdapter = ArrayAdapter(
                         applicationContext, android.R.layout.simple_list_item_multiple_choice,
-                        resources.getStringArray(R.array.skin_persian)
+                        resources.getStringArray(R.array.psychological_persian)
                     )
                 }
                 "hand_foot" -> {
+                    for(i in resources.getStringArray(R.array.hand_foot_english)){
+                        testTypeItemsEnglish.add(i)
+                    }
                     arrayAdapter = ArrayAdapter(
                         applicationContext, android.R.layout.simple_list_item_multiple_choice,
-                        resources.getStringArray(R.array.skin_persian)
+                        resources.getStringArray(R.array.hand_foot_persian)
                     )
                 }
                 "movement" -> {
+                    for(i in resources.getStringArray(R.array.movement_english)){
+                        testTypeItemsEnglish.add(i)
+                    }
                     arrayAdapter = ArrayAdapter(
                         applicationContext, android.R.layout.simple_list_item_multiple_choice,
                         resources.getStringArray(R.array.movement_persian )
                     )
                 }
                 "public" -> {
+                    for(i in resources.getStringArray(R.array.public_english)){
+                        testTypeItemsEnglish.add(i)
+                    }
                     arrayAdapter = ArrayAdapter(
                         applicationContext, android.R.layout.simple_list_item_multiple_choice,
-                        resources.getStringArray(R.array.movement_persian)
+                        resources.getStringArray(R.array.public_persian)
                     )
                 }
             }

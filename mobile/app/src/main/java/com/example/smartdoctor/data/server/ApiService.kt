@@ -46,5 +46,24 @@ interface ApiService {
     @GET("medical-test-response-detail/")
     suspend fun getMedicalTestResponseDetail(@Header("Authorization") token:String,@Query("test_id") testId: Int) : Response<MedicalTestDetailResponseModel>
 
+    @GET("create-user-profile")
+    suspend fun getAllUserProfile(@Header("Authorization") token:String) : Response<UserProfileListModel>
+
+
+
+    @GET("doctor-bookings/")
+    suspend fun getDoctorAllBookings(@Header("Authorization") token:String,@Query("profile_id") profileId: Int) : Response<BookingListModel>
+
+    @POST("create-booking/")
+    suspend fun createBooking(@Header("Authorization") token:String,@Body bookingBodyModel: BookingBodyModel) : Response<BookingListModel.BookingItem>
+
+    @GET("user-bookings/")
+    suspend fun getUserAllBookings(@Header("Authorization") token:String,@Query("profile_id") profileId: Int) : Response<BookingListModel>
+
+    @GET("blog-post-list/")
+    suspend fun getAllBlogPosts():Response<BlogPostListModel>
+
+    @POST("create-chat/")
+    suspend fun createChat(@Header("Authorization") token:String,@Body chatBodyModel: ChatBodyModel):Response<ChatsListModel.chatItem>
 
 }

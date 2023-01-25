@@ -8,8 +8,8 @@ from rest_framework.permissions import AllowAny,IsAuthenticated
 from rest_framework.generics import ListCreateAPIView,RetrieveDestroyAPIView, RetrieveUpdateDestroyAPIView, UpdateAPIView,RetrieveUpdateAPIView,CreateAPIView
 from django.contrib.auth.models import User
 from rest_framework import permissions
-from .serializers import CreateUserSerializer,UserProfileSerializer,ChatSerializer,MessageSerializer,CitySerializer,UserSerializer,BookingSerializer,BookingSettingsSerializer,MedicalTestSerializer,MedicalTestResponseSerializer
-from .models import UserProfile,Chat,Message,City,Booking,BookingSettings,MedicalTest,MedicalTestResponse
+from .serializers import CreateUserSerializer,UserProfileSerializer,ChatSerializer,MessageSerializer,CitySerializer,UserSerializer,BookingSerializer,BookingSettingsSerializer,MedicalTestSerializer,MedicalTestResponseSerializer,BlogPostSerializer
+from .models import UserProfile,Chat,Message,City,Booking,BookingSettings,MedicalTest,MedicalTestResponse,BlogPost
 from . import a
 from django.http import HttpResponse
 import json
@@ -47,8 +47,8 @@ class GetUserDetailView(APIView):
 
 #------------------ create profile -------------------
 #this model create by signal(when user created)
-class CreateUserProfileView(CreateAPIView): 
-    model = UserProfile
+class CreateUserProfileView(ListCreateAPIView): 
+    queryset  = UserProfile.objects.all()
     permission_classes = [
         permissions.AllowAny 
     ]
@@ -81,6 +81,14 @@ class CityListView(ListCreateAPIView):
     queryset=City.objects.all()
     serializer_class=CitySerializer
 
+#---------------------------Blog post --------------------------    
+#http://127.0.0.1:8000/api/blog-post-list/
+class BlogPostListView(ListCreateAPIView):
+    permission_classes = [
+        permissions.AllowAny 
+    ]
+    queryset=BlogPost.objects.all()
+    serializer_class=BlogPostSerializer
 
 #----------------------------Chat and message---------------------------------------
 #get chat messages
@@ -174,6 +182,8 @@ class GetResponseView(APIView):
     def get(self,request):
         a.createResponse(int(request.query_params['test_id']))
         return Response(status=status.HTTP_200_OK)
+
+        
 class GetMedicalTestResponseDetailView(APIView):
     permission_classes = [
         permissions.AllowAny 

@@ -4,6 +4,20 @@ from django.db.models import signals
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+
+#-------------------------------------------
+# 
+class BlogPost(models.Model):
+    title = models.CharField(verbose_name = "عنوان ", max_length=100)
+    text = models.TextField(verbose_name="متن",blank=True,null=True)
+    date = models.DateTimeField(auto_now_add=True,verbose_name="زمان")
+    
+    def __str__(self):
+        return self.title
+    class Meta:
+        verbose_name = 'پست آموزشی   '
+        verbose_name_plural = ' پست های آموزشی '
+
 #---------------City------------------------------
 class City(models.Model):
     city_name = models.CharField(verbose_name = "نام شهر", max_length=50,unique=True)

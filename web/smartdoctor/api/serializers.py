@@ -2,7 +2,7 @@ from django.db import models
 from django.db.models import fields
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import UserProfile,Chat,Message,City,Booking,BookingSettings,MedicalTest,MedicalTestResponse
+from .models import UserProfile,Chat,Message,City,Booking,BookingSettings,MedicalTest,MedicalTestResponse,BlogPost
 
 
 class CreateUserSerializer(serializers.ModelSerializer):
@@ -91,3 +91,8 @@ class BookingSettingsSerializer(serializers.ModelSerializer):
         rep = super(BookingSettingsSerializer, self).to_representation(instance)
         rep['doctor_full_name'] = instance.doctor.full_name
         return rep
+
+class BlogPostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BlogPost
+        fields="__all__"

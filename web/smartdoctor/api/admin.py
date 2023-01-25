@@ -1,6 +1,10 @@
 from django.contrib import admin
-from .models import UserProfile,City,Booking,BookingSettings,Chat,Message,MedicalExpertise,MedicalTest,MedicalTestResponse
+from .models import UserProfile,City,Booking,BookingSettings,Chat,Message,MedicalExpertise,MedicalTest,MedicalTestResponse,BlogPost
 
+
+class BlogPostAdmin(admin.ModelAdmin):
+    list_display = ("title",)
+admin.site.register(BlogPost,BlogPostAdmin)
 
 #---------------------------------------------
 class ChatAdmin(admin.ModelAdmin):

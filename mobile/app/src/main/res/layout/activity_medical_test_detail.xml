@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <View
         android:id="@+id/topView"
         android:layout_width="match_parent"
@@ -28,15 +29,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="10dp"
         android:background="@color/black"/>
-    <View
-        android:id="@+id/bottomView"
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginBottom="10dp"
-        android:background="@color/black"/>
+
     <TextView
         android:id="@+id/testIdTxt"
         android:layout_width="wrap_content"
@@ -53,7 +46,7 @@
         android:id="@+id/diseaseTypeTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="بیماری تشخیص داده شده : "
+        android:text="بیماری تشخیص داده شده : عفونت قارچی"
         app:layout_constraintTop_toBottomOf="@id/testIdTxt"
         app:layout_constraintRight_toLeftOf="@id/rightView"
         android:layout_margin="15dp"
@@ -70,15 +63,26 @@
         android:text="بیمار عزیز \nبرای اطمینان از قطعی بودن بیماری خود حتما به پزشکان \nمتخصص مراجعه کنید. "
         android:textColor="#FF5722" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/reserveBtn"
-
+    <TextView
+        android:id="@+id/reserveTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="رزرو نوبت "
+        android:text="شما میتوانید از لیست زیر اقدام رزرو نوبت برای پزشکان\n متخصص کنید "
         app:layout_constraintRight_toLeftOf="@id/rightView"
         app:layout_constraintTop_toBottomOf="@id/helpTxt"
         android:layout_margin="15dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sugestedDoctorsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/leftView"
+        app:layout_constraintRight_toLeftOf="@id/rightView"
+        app:layout_constraintTop_toBottomOf="@id/reserveTxt"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        tools:listitem="@layout/item_doctor"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

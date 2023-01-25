@@ -31,4 +31,35 @@ class MedicalTestRepository @Inject constructor(private val apiService: ApiServi
             emit(apiService.getMedicalTestResponseDetail(token,testId))
         }.flowOn(Dispatchers.IO)
     }
+
+
+    suspend fun getAllUserProfiles(token: String) : Flow<Response<UserProfileListModel>> {
+        return flow<Response<UserProfileListModel>> {
+            emit(apiService.getAllUserProfile(token))
+        }.flowOn(Dispatchers.IO)
+    }
+
+    suspend fun getDoctorAllBookings(token: String,profileId:Int) : Flow<Response<BookingListModel>>{
+        return flow{
+            emit(apiService.getDoctorAllBookings(token,profileId))
+        }.flowOn(Dispatchers.IO)
+    }
+
+    suspend fun createBooking(token: String,bookingBodyModel: BookingBodyModel) : Flow<Response<BookingListModel.BookingItem>>{
+        return flow {
+            emit(apiService.createBooking(token,bookingBodyModel))
+        }.flowOn(Dispatchers.IO)
+    }
+
+    suspend fun getUserAllBookings(token: String,profileId:Int) : Flow<Response<BookingListModel>>{
+        return flow {
+            emit(apiService.getUserAllBookings(token,profileId))
+        }.flowOn(Dispatchers.IO)
+    }
+
+    suspend fun createChat(token: String,chatBodyModel: ChatBodyModel) : Flow<Response<ChatsListModel.chatItem>>{
+        return flow {
+            emit(apiService.createChat(token,chatBodyModel))
+        }.flowOn(Dispatchers.IO)
+    }
 }

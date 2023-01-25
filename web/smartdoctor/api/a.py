@@ -1,5 +1,6 @@
 import os
 import django
+from .TestModel import ML
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'smartdoctor.settings')
 django.setup()
@@ -14,9 +15,11 @@ def createCity(city_name):
     c.save()
 
 def createResponse(test):
+    inp = MedicalTest.objects.get(id=test).test_input
+    result = ML.mlf(inp)
     mt = MedicalTestResponse()
     mt.test_id = MedicalTest.objects.get(id = test )
-    mt.test_response = "Jeeg"
+    mt.test_response = result
     mt.save()
 
 

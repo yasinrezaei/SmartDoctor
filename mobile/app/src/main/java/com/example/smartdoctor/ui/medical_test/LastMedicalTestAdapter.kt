@@ -57,6 +57,6 @@ class LastMedicalTestAdapter @Inject constructor():RecyclerView.Adapter<LastMedi
     val differ = AsyncListDiffer(this, differCallBack)
 
     private fun djangoDateTimeSlicer(djangoDateTime:String): DjangoDateTime {
-        return DjangoDateTime(djangoDateTime.substring(0, 9),djangoDateTime.substring(11, 16))
+        return DjangoDateTime(djangoDateTime.substring(0, 10),djangoDateTime.substring(11, 16))
     }
 }

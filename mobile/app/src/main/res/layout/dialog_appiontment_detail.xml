@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/headCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="5dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/headConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#A7C8E3"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/appointmentDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@color/my_yellow"
+                android:text="نوبت شما برای ساعت 12:30 روز 01-04-1401 می باشد"
+                android:padding="3dp"
+                android:textColor="@color/black"
+                android:textSize="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/createChatBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/appointmentDate"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/icon_message"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/doctorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/appointmentDate"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textColor="@color/black"
+                android:text=""
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/gmcNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/doctorName"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textColor="@color/black"
+                android:text=""
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/doctorAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/gmcNumber"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textColor="@color/black"
+                android:text=""
+                android:textStyle="bold"/>
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
