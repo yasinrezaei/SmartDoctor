@@ -25,4 +25,10 @@
 - [UI Design in Figma](https://www.figma.com/file/Leh9EjRwMSx6StmtjbY6rp/Untitled?node-id=0%3A1)
 
 ## 🎉 User Interfaces
-![Screenshot](images/1.jpg)
+<p float="left">
+   ![Screenshot](images/1.jpg)
+   ![Screenshot](images/2.jpg)
+   ![Screenshot](images/3.jpg)
+   ![Screenshot](images/4.jpg)
+</p>
+
