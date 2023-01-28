@@ -25,12 +25,9 @@
 - [UI Design in Figma](https://www.figma.com/file/Leh9EjRwMSx6StmtjbY6rp/Untitled?node-id=0%3A1)
 
 ## 🎉 User Interfaces
-<p float="left">
 
-   ![Screenshot](images/1.jpg)
-   ![Screenshot](images/2.jpg)
-   ![Screenshot](images/3.jpg)
-   ![Screenshot](images/4.jpg)
-   
+<p align="center">
+  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/1.jpg" width="350" title="hover text">
+  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/2.jpg" width="350" alt="accessibility text">
 </p>
 
