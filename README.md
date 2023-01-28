@@ -1,6 +1,6 @@
 # SmartDoctor
 
-## 🔧Team
+## 😎Team
 
 - Yasin Rezaei
 - Hosein Mirhoseini
@@ -13,6 +13,11 @@
 - Chatting with doctors
 - Reliable test result
 - Medical facts
+
+## 🔧 Implementation
+- Kotlin
+- Django Rest Framework
+- Retrofit
 
 ## 🔍 Links
 - [software test video](https://www.google.com)
