@@ -1,32 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1">
 
-    <fragment
-        android:id="@+id/signUpNavHost"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:defaultNavHost="true"
-        app:layout_constraintTop_toBottomOf="@id/bottomNav"
-        app:layout_constraintLeft_toLeftOf="@id/bottomNav"
-        app:layout_constraintRight_toRightOf="@id/bottomNav"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:navGraph="@navigation/nav_signup"
-        tools:layout="@layout/fragment_profile" />
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNav"
+        android:orientation="vertical"
+        android:layout_weight="0.4"
+        android:background="@drawable/bg_login">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/signuptxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text=" ایجاد حساب کاربری"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"/>
+            <EditText
+                android:id="@+id/edtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:gravity="right"
+                app:layout_constraintTop_toBottomOf="@id/signuptxt"
+                app:layout_constraintLeft_toLeftOf="@id/signuptxt"
+                app:layout_constraintRight_toRightOf="@id/signuptxt"
+                android:hint="نام کاربری"
+                android:background="@drawable/bg_circle_white"
+                android:padding="10dp"/>
+            <EditText
+                android:id="@+id/edtPassword1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                app:layout_constraintEnd_toEndOf="@+id/edtUserName"
+                app:layout_constraintStart_toStartOf="@+id/edtUserName"
+                app:layout_constraintTop_toBottomOf="@+id/edtUserName"
+                android:hint="رمز عبور"
+                android:inputType="textPassword"
+                android:gravity="right"
+                android:background="@drawable/bg_circle_white"
+                android:padding="10dp"/>
+
+            <EditText
+                android:id="@+id/edtPassword2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                app:layout_constraintEnd_toEndOf="@+id/edtPassword1"
+                app:layout_constraintStart_toStartOf="@+id/edtPassword1"
+                app:layout_constraintTop_toBottomOf="@+id/edtPassword1"
+                android:hint="تکرار رمز عبور"
+                android:inputType="textPassword"
+                android:gravity="right"
+                android:background="@drawable/bg_circle_white"
+                android:padding="10dp"/>
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/edtPassword2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/menu_signup_paging"
-        app:itemTextColor="@color/white"
-        android:background="#2196F3"
-        android:paddingBottom="5dp"
-        app:itemActiveIndicatorStyle="@color/my_yellow"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="0.3"
+        android:layout_gravity="center"
+        android:gravity="center">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signUpBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="ثبت نام"
+            android:background="@drawable/bg_login_btn"
+            android:ems="10"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</LinearLayout>

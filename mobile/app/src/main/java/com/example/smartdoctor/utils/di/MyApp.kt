@@ -1,4 +1,4 @@
-package com.example.smartdoctor.utils
+package com.example.smartdoctor.utils.di
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

@@ -1,6 +1,10 @@
 from django.contrib import admin
-from .models import UserProfile,City,Booking,BookingSettings,Chat,Message
+from .models import UserProfile,City,Booking,BookingSettings,Chat,Message,MedicalExpertise,MedicalTest,MedicalTestResponse,BlogPost
 
+
+class BlogPostAdmin(admin.ModelAdmin):
+    list_display = ("title",)
+admin.site.register(BlogPost,BlogPostAdmin)
 
 #---------------------------------------------
 class ChatAdmin(admin.ModelAdmin):
@@ -30,7 +34,16 @@ class CityAdmin(admin.ModelAdmin):
 
 admin.site.register(City,CityAdmin)
 
+#--------------------------------------------
+class MedicalTestAdmin(admin.ModelAdmin):
+    list_display=('user_id','date')
+admin.site.register(MedicalTest,MedicalTestAdmin)
 
+class MedicalTestResponseAdmin(admin.ModelAdmin):
+    list_display=('test_id','test_response')
+admin.site.register(MedicalTestResponse,MedicalTestResponseAdmin)
+
+#--------------------------------------------
 class UserProfileAdmin(admin.ModelAdmin):
     list_display=('full_name','isDoctor','city')
     list_filter=(['city'])
@@ -38,3 +51,9 @@ class UserProfileAdmin(admin.ModelAdmin):
 
 admin.site.register(UserProfile,UserProfileAdmin)
 
+#---------------------------------------------
+class MedicalExpertiseAdmin(admin.ModelAdmin):
+    list_display=('medical_expertise_name',)
+    search_fields=('medical_expertise_name',)
+
+admin.site.register(MedicalExpertise,MedicalExpertiseAdmin)
