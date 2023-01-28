@@ -27,7 +27,7 @@
 ## 🎉 User Interfaces
 
 <p align="center">
-  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/1.jpg" width="350">
+  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/1.jpg" width="100" height="200">
   <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/2.jpg" width="350">
   <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/3.jpg" width="350">
   <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/4.jpg" width="350">
