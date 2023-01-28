@@ -70,7 +70,6 @@ internal class TestTypeGVAdapter(
         // at last we are returning our convert view.
 
         testTypeImage.setOnClickListener {
-            Toast.makeText(context,testTypeList.get(position).typeEnglishName,Toast.LENGTH_SHORT).show()
             val intent = Intent(context,DoMedicalTestActivity::class.java)
             intent.putExtra("TestTypeName",testTypeList.get(position).typeEnglishName)
             context.startActivity(intent)
