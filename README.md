@@ -28,14 +28,14 @@
 
 <p align="center">
   <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/1.jpg" width="150" height="250">
-  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/2.jpg" width="350">
-  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/3.jpg" width="350">
-  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/4.jpg" width="350">
+  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/2.jpg" width="150" height="250">
+  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/3.jpg" width="150" height="250">
+  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/4.jpg" width="150" height="250">
   
-  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/5.jpg" width="350">
-  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/6.jpg" width="350">
-  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/7.jpg" width="350">
-  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/8.jpg" width="350">
-  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/9.jpg" width="350">
+  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/5.jpg" width="150" height="250">
+  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/6.jpg" width="150" height="250">
+  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/7.jpg" width="150" height="250">
+  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/8.jpg" width="150" height="250">
+  <img src="https://github.com/yasinrezaei/SmartDoctor/blob/main/images/9.jpg" width="150" height="250">
 </p>
 
